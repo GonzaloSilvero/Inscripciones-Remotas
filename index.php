@@ -6,27 +6,29 @@
 	<link rel="stylesheet" type="text/css" href="estilos/Inicio.css">
 </head>
 
-
+<!----Registro---->
 <body>
+
 	<header>Formulario de Inscripcion</header>
 	
-	<center>
+   <center>
 	<form action="index.php" method="get">
-	<article id="cuerpo">
-		<section>
-			Usuario
-			<br>
-			<input type="text" name="Usuario">
-		</section>
-		<section>
-			Contraseña
-			<br>
-			<input type="text" name="Contraseña">
-		</section>
-			<input type="submit" name="ingresar" value="ingresar">
-	</article>
+
+	  <article id="cuerpo">
+
+		  <section>	Usuario<br>
+		  	<input type="text" name="Usuario">
+		  </section>
+
+		  <section>
+		  	Contraseña<br>
+		  	<input type="text" name="Contraseña">
+		  </section>
+
+		  	<input type="submit" name="ingresar" value="ingresar">
+	  </article>
 	</form>
-	<div>
+    <div>
 		<a href="tutor.php">Registrarse</a>
 	</div>
 	</center>
