@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Formulario de Inscripcion</title>
+	<meta charset="UTD-8">
 	<link rel="stylesheet" type="text/css" href="estilos/Inicio.css">
 </head>
+
+
 <body>
 	<header>Formulario de Inscripcion</header>
 	<center>
