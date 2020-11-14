@@ -12,7 +12,7 @@
 		<section>
 			Usuario
 			<br>
-			<input type="text" name="Usuario">
+			<input type="text" name="Usuaio">
 		</section>
 		<section>
 			Contraseña
