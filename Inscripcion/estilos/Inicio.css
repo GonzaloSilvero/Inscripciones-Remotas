@@ -1,0 +1,29 @@
+header{
+	text-align: center;
+	font-size: 70px;
+}
+
+#cuerpo{
+	margin-top: 5%; 
+}
+
+section{
+	margin-bottom: 20px; 
+}
+
+input[type=submit] { 
+	margin-top: 10px; 
+	font-size: 18px;
+     height: 35px; 
+    width: 120px; 
+} 
+
+div{
+	margin-top: 100px;
+}
+a{
+	text-decoration: none;
+	color: #000;
+	font-size: 18px;
+
+}

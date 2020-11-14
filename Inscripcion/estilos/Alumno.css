@@ -1,0 +1,30 @@
+.colum1{
+	float: left;
+	margin-left: 25%;
+	margin-top: 10%; 
+
+}
+
+.colum2{
+	float: right;
+	margin-right: 23%;
+	margin-top: 10%; 
+}
+
+header{
+	text-align: center;
+	font-size: 70px;
+}
+
+div{
+	position:absolute;
+	left:0px; 
+	right:0px; 
+	bottom:50px;
+}
+
+input[type=submit] { 
+	font-size: 25px;
+     height: 50px; 
+    width: 200px; 
+} 
