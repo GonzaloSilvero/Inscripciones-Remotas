@@ -26,5 +26,11 @@
 		<a href="tutor.php">Registrarse</a>
 	</div>
 	</center>
+	
+	<!----pie de pagina---->
+	<footer>
+		<p>Direccion:bariloche 4455,La Matanza Telefono:(011)4444-5555 Gmail:eest14lamatanza@abc.gob.ar    &copy; <?=date('y')?> </p>
+	</footer>
+   
 </body>
 </html>
