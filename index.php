@@ -9,6 +9,7 @@
 
 <body>
 	<header>Formulario de Inscripcion</header>
+	
 	<center>
 	<form action="index.php" method="get">
 	<article id="cuerpo">
