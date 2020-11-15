@@ -32,7 +32,7 @@
 			<section>
 			<label>Telefono
 				<br>
-				<input type="tel" name="telefono" placeholder="xx xxxx xxxx" maxlength="10" required></label>
+				<input type="tel" name="telefono" placeholder="xx xxxx xxxx" minlength="6" maxlength="10" required></label>
 			</section>
 			<section>
 			<label>Email
