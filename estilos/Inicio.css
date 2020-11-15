@@ -1,29 +1,24 @@
-header{
-	text-align: center;
-	font-size: 70px;
-}
-
-#cuerpo{
-	margin-top: 5%; 
-}
-
 section{
 	margin-bottom: 20px; 
 }
 
 input[type=submit] { 
-	margin-top: 10px; 
+	margin-top: 3%; 
 	font-size: 18px;
      height: 35px; 
     width: 120px; 
 } 
 
-div{
-	margin-top: 100px;
+#guiaRegistro{
+	margin-top: 10%;
 }
+
 a{
 	text-decoration: none;
-	color: #000;
+	color: rgb(17, 0, 255);
 	font-size: 18px;
+}
 
+a:hover {
+	color: rgb(55, 2, 141)
 }
