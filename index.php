@@ -12,7 +12,7 @@
 	<header>Formulario de Inscripcion</header>
 	
    <center>
-	<form action="index.php" method="get">
+	<form action="index.php" method="post">
 
 	  <article id="cuerpo">
 
@@ -28,9 +28,9 @@
 		  	<input type="submit" name="ingresar" value="ingresar">
 	  </article>
 	</form>
-    <div>
+
 		<a href="tutor.php">Registrarse</a>
-	</div>
+
 	</center>
 	
 	<!----pie de pagina---->
