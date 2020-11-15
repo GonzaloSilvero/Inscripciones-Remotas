@@ -21,11 +21,7 @@
 		<br>
 			Edad
 		<br>
-			<input type="number" name="edadAl" require>
-		<br>
-			3 digitos del DNI
-		<br>
-			<input type=" number" name="dniAL" require>
+			<input type="text" name="edadAl" require>
 		<br>
 			Domicilio
 		<br>
