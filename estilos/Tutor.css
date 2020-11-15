@@ -1,14 +1,3 @@
-
-
-header{
-	text-align: center;
-	font-size: 70px;
-}
-
-#cuerpo{
-	margin-top: 5%; 
-}
-
 section{
 	margin-bottom: 20px; 
 }
@@ -16,18 +5,20 @@ section{
 input[type=submit] { 
 	margin-top: 30px; 
 	font-size: 18px;
-     height: 35px; 
+	height: 35px; 
     width: 120px; 
 } 
 
-div{
-	font-size: 30px;
-	color: green;
-	margin-top: 100px;
-	margin-bottom: 30px;
-}
 a{
 	text-decoration: none;
 	font-size: 18px;
 
+}
+
+.Titulo{
+	text-align: center;
+	width: 25%;
+	border-color: #444b53;
+    border-width: 8px;
+    border-style: double;
 }
