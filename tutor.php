@@ -20,34 +20,34 @@
 		<center>
 		<article id="cuerpo">
 			<section>
-				<label for="nombreTuto">Nombre</label>
+				<label>Nombre
 				<br>
-				<input type="text" name="nombreTuto" placeholder="Nombre" required>
+				<input type="text" name="nombreTuto" placeholder="Nombre" required></label>
 			</section>
 			<section>
-			<label for="apellidoTuto">Apellido</label>
+			<label>Apellido
 				<br>
-				<input type="text" name="apellidoTuto" placeholder="Apellido" required>
+				<input type="text" name="apellidoTuto" placeholder="Apellido" required></label>
 			</section>
 			<section>
-			<label for="telefono">Telefono</label>
+			<label>Telefono
 				<br>
-				<input type="tel" name="telefono" placeholder="xx xxxx xxxx" maxlength="10" required>
+				<input type="tel" name="telefono" placeholder="xx xxxx xxxx" maxlength="10" required></label>
 			</section>
 			<section>
-			<label for="gmailTuto">Email</label>
+			<label>Email
 				<br>
-				<input type="email" name="gmailTuto" placeholder="ejemplo@gmail.com" required>
+				<input type="email" name="gmailTuto" placeholder="ejemplo@gmail.com" required></label>
 			</section>
 			<section>
-			<label for="usuario">Usuario</label>
+			<label>Usuario
 				<br>
-				<input type="text" name="usuario" placeholder="DNI del tutor" minlength="8" maxlength="8" required>
+				<input type="text" name="usuario" placeholder="DNI del tutor" minlength="8" maxlength="8" required></label>
 			</section>
 			<section>
-			<label for="contraseña">Contraseña</label>
+			<label>Contraseña
 				<br>
-				<input type="text" name="contraseña" placeholder="DNI del alumno" minlength="8" maxlength="8" required>
+				<input type="text" name="contraseña" placeholder="DNI del alumno" minlength="8" maxlength="8" required></label>
 			</section>
 				<input type="submit" name="ida" value="Registrarse">
 		</article>	
@@ -76,24 +76,5 @@
 			</div>
 		</div>
 	</div>
-	<!--<footer>
-		<article id="footer">
-            <section style="float: left" class="sec">
-				Direccion:<br> 
-				bariloche 4455,La Matanza
-			</section>			
-			<section style="float: left" class="sec">
-				Telefono:<br>
-				(011)4444-5555
-			</section>
-			<section style="float: left" class="sec">
-				Gmail:<br>
-				eest14lamatanza@abc.gob.ar
-			</section>	
-			<section style="float: left" class="sec">
-				&copy; <?=date('y')?> EEST°14, por alumnos
-			</section>
-		</article>    
-	</footer> -->
 </body>
 </html>
