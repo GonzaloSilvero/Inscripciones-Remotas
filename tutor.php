@@ -16,7 +16,7 @@
 	</header>
 	<!-- -->
 
-	<form action="efectuarRegistro.php" method="POST">
+	<form action="tutor.php" method="POST">
 		<center>
 		<article id="cuerpo">
 
@@ -37,7 +37,7 @@
 
 			<section>
 				<label>Email<br>
-				<input type="email" name="Email_T" placeholder="ejemplo@gmail.com" required></label>
+				<input type="email" name="email_T" placeholder="ejemplo@gmail.com" required></label>
 			</section>
 
 			<section>
@@ -57,16 +57,25 @@
 
 	
 	<?php
+
+	$conexion =mysqli_connect("localhost", "root", "","sorteo");
+
+
+	//require_once 'conexiones.php';
 		if (isset($_POST['ida'])) {
 
 			//Recoger los valores del formulario de registro
-			$nombre_T= isset($_POST['nombre_T']) ? $_POST ['nombre_T']: false;
-			$apellido_T= isset($_POST['apellido_T']) ? $_POST ['apellido_T']: false;
-			$telefono_T= isset($_POST['telefono_T']) ? $_POST ['telefono_T']: false;
-			$Email_T= isset($_POST['email_T']) ? $_POST ['Email_T']: false;
-			$Usuario_T= isset($_POST['usuario_T']) ? $_POST ['Usuario_T']: false;
-			$contrasena_T= isset($_POST['contrasena_T']) ? $_POST ['contrasena_T']: false;
+			$nombre_T= $_POST['nombre_T'];
+			$apellido_T= $_POST['apellido_T'];
+			$telefono_T= $_POST['telefono_T'];
+			$Email_T= $_POST['email_T'];
+			$Usuario_T= $_POST['usuario_T'];
+			$contrasena_T= $_POST['contrasena_T'];
 			//Array de errores
+			$contrasena_T_codificada=password_hash($contrasena_T, PASSWORD_BCRYPT, ['cost'=>4]);
+
+			$consulta="INSERT INTO `tutor` (`ID`, `Nombre`, `Apellido`, `Telefono`, `Usuario`, `Gmail`, `Contraseña`, `Chicos_i`) VALUES ('', '$nombre_T', '$apellido_T', '$telefono_T', '$Usuario_T', '$Email_T', '$contrasena_T_codificada', '4');";
+			$resultado= mysqli_query($conexion, $consulta);
 		}
 	?>
 
