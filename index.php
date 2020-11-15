@@ -35,7 +35,18 @@
 	
 	<!----pie de pagina---->
 	<footer>
-		<p>Direccion:bariloche 4455,La Matanza Telefono:(011)4444-5555 Gmail:eest14lamatanza@abc.gob.ar    &copy; <?=date('y')?> </p>
+		<table>
+			<tr>
+		        <td colspan ="2">Direccion:</td> 
+		        <td>Telefono:</td>
+		        <td> Gmail:</td>
+		    </tr>
+			<tr>
+			    <td colspan ="2">bariloche 4455,La Matanza</td> 
+			    <td>(011)4444-5555</td>
+			    <td>eest14lamatanza@abc.gob.ar</td>
+		    </tr>	
+		</table>    &copy; <?=date('y')?>
 	</footer>
    
 </body>
