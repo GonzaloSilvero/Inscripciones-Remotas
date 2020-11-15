@@ -8,7 +8,8 @@
 <body> 
 
     <div>
-	<form action="efectuarRegistro.php" method="POST">			
+	<form action="efectuarRegistro.php" method="POST">	
+			
 		<label for ="Nomber_T">Nombre</label><br>
 		<input type="text" name="Nombre_T"/><br>
 
