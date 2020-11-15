@@ -67,7 +67,6 @@
 			$Usuario_T= isset($_POST['usuario_T']) ? $_POST ['Usuario_T']: false;
 			$contrasena_T= isset($_POST['contrasena_T']) ? $_POST ['contrasena_T']: false;
 			//Array de errores
-			$errores= array();
 		}
 	?>
 
