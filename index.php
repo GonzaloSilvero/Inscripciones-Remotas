@@ -13,14 +13,14 @@
 	<form action="index.php" method="get">
 	<article id="cuerpo">
 		<section>
-			Usuario
+			<label>Usuario
 			<br>
-			<input type="text" name="Usuario">
+			<input type="text" name="Usuario"></label>
 		</section>
 		<section>
-			Contraseña
+			<label>Contraseña
 			<br>
-			<input type="text" name="Contraseña">
+			<input type="text" name="Contraseña"></label>
 		</section>
 			<input type="submit" name="ingresar" value="ingresar">
 	</article>

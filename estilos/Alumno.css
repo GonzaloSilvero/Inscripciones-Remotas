@@ -8,7 +8,8 @@
 .colum2{
 	float: right;
 	margin-right: 23%;
-	margin-top: 10%; 
+	margin-top: 15%; 
+	align-content: center;
 }
 
 header{
@@ -16,12 +17,18 @@ header{
 	font-size: 70px;
 }
 
-div{
+.adjuntados{
+	margin-bottom: 10%;
+}
+
+#boton{
 	position:absolute;
 	left:0px; 
 	right:0px; 
 	bottom:50px;
 }
+
+
 
 input[type=submit] { 
 	font-size: 25px;

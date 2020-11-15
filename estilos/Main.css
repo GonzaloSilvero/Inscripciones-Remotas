@@ -1,7 +1,3 @@
-html {
-    height: 100%;
-}
-
 body {
     background-color:#d2d9df;
     display: flex;
@@ -22,15 +18,19 @@ header{
 
 #footer {
     background: #000;
+    position: absolute;
     width: 100%;
     height: auto;
-    padding-left: 0px;
+    left: 0px;
+    right: 0px;
     margin: 0px;
     bottom: 0px;
 }
 
 .info {
+    font-size: smaller;
     color: #fff;
+    margin:0px;
     width: 25%;
     float: left;
 }
