@@ -11,13 +11,6 @@
    	//Array de errores
     $errores= array();
 
- class registro extends AnotherClass
- {
- 	
- 	function __construct(argument)
- 	{
- 		# code...
- 	}
  }
    	//Validar los datos antes de guardarlos en la base de datos
    	//Validar campo nombre
@@ -30,18 +23,42 @@
 
    	//Validar campo Apellido
    	if (!empty($apellido_T)&& !is_numeric($apellido_T)&& !preg_match("//[0-9]/", $apellido_T)) {
-    	$nombre_T_valido=true;
+    	$apellido_T_valido=true;
     }else{
         $apellido_T_valido=false;
         $errores['apellido_T']="El Apellido no es valido";
     }
    	//Validar campo Telefono
-    //Validar campo Gmail
-    //Validar campo usuario
-    //Validar campo contraseña
 
-   	var_dump($_POST);
-  }
+    //Validar campo Gmail
+    if (!empty($email_T) && filter_var($Email_T, FILTER_VALIDATE_EMAIL))  {
+    	$email_T_valido=true;
+    }else{
+        $email_T_valido=false;
+        $errores['email_T']="El email no es valido";
+    }
+    //Validar campo usuario
+
+    //Validar campo contraseña
+    if (!empty($contrasena_T)){
+
+    	$contrasena_T_valido=true;
+
+    }else{
+
+        $contrasena_T_valido=false;
+        $errores['contrasena_T']="El contraseña no es valido";
+     }
+
+    $guardar_usuario= false;
+
+    if (count($errores) == 0) {
+    	$guardar_usuario= true;
+
+
+    	//insertar usuarion en la base de datos
+    }
+
 ?>
 
 <div>
