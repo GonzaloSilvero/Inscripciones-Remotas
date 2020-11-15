@@ -10,25 +10,27 @@
 	<center>
 	<header>Formulario de Inscripcion</header>
 	
-	<form action="index.php" method="get">
+	<form action="index.php" method="POST">
 	<article id="cuerpo">
 		<section>
-			<label>Usuario
-			<br>
+			<label>Usuario<br>
 			<input type="text" name="Usuario"></label>
 		</section>
+
 		<section>
-			<label>Contraseña
-			<br>
+			<label>Contraseña<br>
 			<input type="text" name="Contraseña"></label>
 		</section>
+
 			<input type="submit" name="ingresar" value="ingresar">
 	</article>
 	</form>
+
 	<div id="guiaRegistro">
 		si no eres parte del establecimiento: <a href="tutor.php" >Registrarse</a>
 	</div>
 	</center>
+	
 	<!----pie de pagina---->
 	<div id="footer">
 		<div class="conteiner">

@@ -8,47 +8,40 @@
 <body>
 	<center>
 	<header>Alumno</header>
-	<form action="alumno.php" method="get">
+	<form action="alumno.php" method="POST">
 	<article class="colum1">
-	<section >
-			Nombre
-		<br>
-			<input type="text" name="nombreAl" require>
-		<br>
-			Apellido
-		<br>
-			<input type="text" name="apellidoAl" require>
-		<br>
-			Edad
-		<br>
-			<input type="number" name="edadAl" require>
-		<br>
-			3 digitos del DNI
-		<br>
-			<input type=" number" name="dniAL" require>
-		<br>
-			Domicilio
-		<br>
-			<input type="text" name="domicilioAl" require>
-		<br>
-			Escuela anterior
-		<br>
-			<input type="text" name="escAnterior" require>
+	<section>
+		Nombre<br>
+		<input type="text" name="nombreAl" required>
+
+		<br>Apellido<br>
+		<input type="text" name="apellidoAl" required>
+
+		<br>Edad<br>
+		<input type="number" name="edadAl" required>
+
+		<br>3 digitos del DNI<br>
+		<input type=" number" name="dniAL" required>
+
+		<br>Domicilio<br>
+		<input type="text" name="domicilioAl" required>
+
+		<br>Escuela anterior<br>
+		<input type="text" name="escAnterior" required>
 		</article>
+		
 		<article class="colum2">
 		<section>
 			<div class="adjuntados">
-				Adjuntar DNI
-			<br>
-				<input type="file" name="ImagDNIAl" accept="image/*" require>
+				Adjuntar DNI<br>
+				<input type="file" name="ImagDNIAl" accept="image/*" required>
 			</div>
+
 			<div class="adjuntados">
-				Adjuntar Constancia
-			<br>
-				<input type="file" name="constancia" accept="image/*" require>
+				Adjuntar Constancia<br>
+				<input type="file" name="constancia" accept="image/*" required>
 			</div>
-		</section>
-			
+		</section>	
 		</article>
 	</form>
 
