@@ -38,7 +38,7 @@
         $errores['email_T']="El email no es valido";
     }
     //Validar campo usuario
-
+    
     //Validar campo contraseña
     if (!empty($contrasena_T)){
 
