@@ -25,13 +25,33 @@
 			<input type="submit" name="ingresar" value="ingresar">
 	</article>
 	</form>
-	<div>
+	<div id="guiaRegistro">
 		si no eres parte del establecimiento: <a href="tutor.php" >Registrarse</a>
 	</div>
 	</center>
 	<!----pie de pagina---->
-	<footer>
-		<p>Direccion:bariloche 4455,La Matanza Telefono:(011)4444-5555 Gmail:eest14lamatanza@abc.gob.ar    &copy; <?=date('y')?> </p>
-	</footer>
+	<div id="footer">
+		<div class="conteiner">
+			<div class="row">
+				<div class="col1">
+					<p class="info">
+						Direccion:<br> 
+						bariloche 4455,La Matanza
+					</p>
+					<p class="info">
+						Telefono:<br>
+						(011)4444-5555
+					</p>
+					<p class="info">
+						Gmail:<br>
+						eest14lamatanza@abc.gob.ar
+					</p>
+					<p class="info">
+						&copy; <?=date('y')?> EEST°14, por alumnos
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

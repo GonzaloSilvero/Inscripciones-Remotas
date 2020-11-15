@@ -3,15 +3,16 @@ section{
 }
 
 input[type=submit] { 
-	margin-top: 10px; 
+	margin-top: 3%; 
 	font-size: 18px;
      height: 35px; 
     width: 120px; 
 } 
 
-div{
-	margin-top: 100px;
+#guiaRegistro{
+	margin-top: 10%;
 }
+
 a{
 	text-decoration: none;
 	color: rgb(17, 0, 255);
