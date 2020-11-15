@@ -19,7 +19,7 @@
 
 		<section>
 			<label>Contraseña<br>
-			<input type="text" name="Contraseña"></label>
+			<input type="password" name="Contraseña"></label>
 		</section>
 
 			<input type="submit" name="ingresar" value="ingresar">

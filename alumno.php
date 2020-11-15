@@ -43,10 +43,11 @@
 			</div>
 		</section>	
 		</article>
-	</form>
 
-	<div id="boton"><input type="submit" name="ida" value="Finalizar"></div>
+		<div id="boton"><input type="submit" name="ida" value="Finalizar"></div>
+	</form>
 	</center>
+
 
 	<!----pie de pagina---->
 	<div id="footer">
