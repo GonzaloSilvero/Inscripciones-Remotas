@@ -11,6 +11,25 @@
 	<center>
 	<header>Formulario de Inscripcion</header>
 	
+	<!--
+	<form>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Email address</label>
+			<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+			<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+		</div>
+			<div class="form-group">
+			<label for="exampleInputPassword1">Password</label>
+			<input type="password" class="form-control" id="exampleInputPassword1">
+		</div>
+			<div class="form-group form-check">
+			<input type="checkbox" class="form-check-input" id="exampleCheck1">
+			<label class="form-check-label" for="exampleCheck1">Check me out</label>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+	-->
+
 	<form action="index.php" method="get">
 	<article id="cuerpo">
 		<section style="float: left">
@@ -22,10 +41,12 @@
 			<label>Contraseña
 			<br>
 			<input class="form_input" type="text" name="Contraseña" required></label>
-		</section style="float: left">
+		</section>
+		<section style="clear: both">
 			<input type="submit" name="ingresar" value="ingresar">
+		</section>
 	</article>
-	</form>
+	</form> 
 	<div id="guiaRegistro">
 		Si no eres parte del establecimiento: <a href="tutor.php" >Registrarse</a>
 	</div>
