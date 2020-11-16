@@ -1,24 +1,19 @@
-html {
-    height: 100%;
-}
-
-
 body {
     background-color:#d2d9df;
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 header{
     text-align: center;
     font-size: 70px;
-	font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: Roboto;
 }
 
 #cuerpo{
 	margin-top: 5%; 
-	font-family: Tahoma, Geneva, sans-serif;
+    width: 400px;
+    font-family: Quicksand;
 }
 
 #footer {
@@ -28,7 +23,6 @@ header{
     margin-bottom: 0px;
     left: 0px;
     right: 0px;
-    
     bottom: 0px;
     position: absolute;
     font-size: smaller;
@@ -40,4 +34,11 @@ header{
     float: left;
     text-align: center;
     margin: 0px;
+}
+
+.form_input {
+    width: 200px;
+    height: 20px;
+    background: rgba(35, 26, 106, 0.2);
+    float: left;
 }
