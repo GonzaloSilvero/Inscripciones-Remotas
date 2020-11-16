@@ -10,7 +10,7 @@
 	<div>
 		Su registro se a efectuado
 	</div>
-	<a href="indexf.php"> volver a el inicio</a>
+	<a href="index.php"> volver a el inicio</a>
 	<?
 </body>
 </html>

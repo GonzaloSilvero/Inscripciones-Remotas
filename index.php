@@ -5,6 +5,7 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="estilos/Inicio.css">
 	<link rel="stylesheet" type="text/css" href="estilos/Main.css">
+	<link rel="stylesheet" type="text/css" href="font.css">
 </head>
 <body>
 	<center>
@@ -12,21 +13,21 @@
 	
 	<form action="index.php" method="get">
 	<article id="cuerpo">
-		<section>
+		<section style="float: left">
 			<label>Usuario
 			<br>
-			<input type="text" name="Usuario" required></label>
+			<input class="form_input" type="text" name="Usuario" required></label>
 		</section>
-		<section>
+		<section style="float: left">
 			<label>Contraseña
 			<br>
-			<input type="text" name="Contraseña" required></label>
-		</section>
+			<input class="form_input" type="text" name="Contraseña" required></label>
+		</section style="float: left">
 			<input type="submit" name="ingresar" value="ingresar">
 	</article>
 	</form>
 	<div id="guiaRegistro">
-		si no eres parte del establecimiento: <a href="tutor.php" >Registrarse</a>
+		Si no eres parte del establecimiento: <a href="tutor.php" >Registrarse</a>
 	</div>
 	</center>
 	<!----pie de pagina---->
