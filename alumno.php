@@ -13,33 +13,33 @@
 	<section >
 			Nombre
 		<br>
-			<input type="text" name="nombreAl" require>
+			<input type="text" name="nombreAl" required>
 		<br>
 			Apellido
 		<br>
-			<input type="text" name="apellidoAl" require>
+			<input type="text" name="apellidoAl" required>
 		<br>
 			Edad
 		<br>
-			<input type="text" name="edadAl" require>
+			<input type="text" name="edadAl" required>
 		<br>
 			Domicilio
 		<br>
-			<input type="text" name="domicilioAl" require>
+			<input type="text" name="domicilioAl" required>
 		<br>
 			Escuela anterior
 		<br>
-			<input type="text" name="escAnterior" require>
+			<input type="text" name="escAnterior" required>
 		</article>
 		<article class="colum2">
 		<section>
 			Adjuntar DNI
 		<br>
-			<input type="file" name="ImagDNIAl" accept="image/*" require>
+			<input type="file" name="ImagDNIAl" accept="image/*" required>
 		<br>
 			Adjuntar Constancia
 		<br>
-			<input type="file" name="constancia" accept="image/*" require>
+			<input type="file" name="constancia" accept="image/*" required>
 		</section>
 			
 		</article>
