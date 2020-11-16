@@ -3,7 +3,8 @@
 <head>
 	<title>Formulario de Inscripcion</title>
 	<meta charset="UTD-8">
-	<link rel="stylesheet" type="text/css" href="estilos/Inicio.css">
+    <link rel="stylesheet" type="text/css" href="estilos/Inicio.css">
+	<link rel="stylesheet" type="text/css" href="estilos/Main.css">
 </head>
 
 <!----Registro---->
@@ -33,21 +34,32 @@
 
 	</center>
 	
-	<!----pie de pagina---->
-	<footer>
-		<table>
-			<tr>
-		        <td colspan ="2">Direccion:</td> 
-		        <td>Telefono:</td>
-		        <td> Gmail:</td>
-		    </tr>
-			<tr>
-			    <td colspan ="2">bariloche 4455,La Matanza</td> 
-			    <td>(011)4444-5555</td>
-			    <td>eest14lamatanza@abc.gob.ar</td>
-		    </tr>	
-		</table>    &copy; <?=date('y')?>
-	</footer>
+<div id="footer">
+		<div class="conteiner">
+			<div class="row">
+				<div class="col1">
+					<p class="info">
+						Direccion:<br> 
+						bariloche 4455,La Matanza
+					</p>
+					<p class="info">
+						Telefono:<br>
+						(011)4444-5555
+					</p>
+					<p class="info">
+						Gmail:<br>
+						eest14lamatanza@abc.gob.ar
+					</p>
+					<p class="info">
+						&copy; <?=date('y')?> EEST°14, por alumnos
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
    
 </body>
 </html>

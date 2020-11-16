@@ -7,4 +7,8 @@ $basededatos='sorteo';
 
 $db=mysql_connect($servidor,$usuario,$password,$basededatos);
 mysql_query($db,"set names 'utf8'");
+
+//Iniciar la sesióm
+
+session_start();
 ?>
