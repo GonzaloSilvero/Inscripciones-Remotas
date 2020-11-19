@@ -14,12 +14,12 @@
 	<article id="cuerpo">
 		<section>
 			<label>Usuario<br>
-			<input type="text" name="Usuario"></label>
+			<input type="text" name="usuario"></label>
 		</section>
 
 		<section>
 			<label>Contraseña<br>
-			<input type="password" name="Contraseña"></label>
+			<input type="text" name="contrasena"></label>
 		</section>
 
 			<input type="submit" name="ingresar" value="ingresar">
@@ -31,6 +31,40 @@
 	</div>
 	</center>
 	
+	<?php
+
+	$conexion =mysqli_connect("localhost", "root", "","sorteo");
+		if (isset($_POST['ingresar']))
+		{
+
+			//Recoger los valores del formulario de registro
+			$usuario = $_POST['usuario'];
+			$contrasena= $_POST['contrasena'];
+
+			$resultado_usuario= mysqli_query($conexion, "SELECT * FROM `tutor` WHERE `Usuario` = '$usuario' ");
+			$usuarioBase= mysqli_fetch_assoc($resultado_usuario);
+
+			
+
+			if ($usuario == $usuarioBase['Usuario']) {
+				
+				if ($contrasena == $usuarioBase['Contraseña']) {
+					header("Location: hub.php");
+					die();
+				}
+				else
+				{
+					echo "contraseña mal";
+				}
+			}
+			else 
+			{
+				echo "no funciona";
+			}
+		}
+
+	?>
+
 	<!----pie de pagina---->
 	<div id="footer">
 		<div class="conteiner">

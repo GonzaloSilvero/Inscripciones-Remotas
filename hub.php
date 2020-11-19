@@ -5,5 +5,7 @@
 </head>
 <body>
 	<header>Alumnos registrados</header>
+	funciona el inicio
+	
 </body>
 </html>

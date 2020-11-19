@@ -71,10 +71,10 @@
 			$Email_T= $_POST['email_T'];
 			$Usuario_T= $_POST['usuario_T'];
 			$contrasena_T= $_POST['contrasena_T'];
-			//Array de errores
-			$contrasena_T_codificada=password_hash($contrasena_T, PASSWORD_BCRYPT, ['cost'=>4]);
 
-			$consulta="INSERT INTO `tutor` (`ID`, `Nombre`, `Apellido`, `Telefono`, `Usuario`, `Gmail`, `Contraseña`, `Chicos_i`) VALUES ('', '$nombre_T', '$apellido_T', '$telefono_T', '$Usuario_T', '$Email_T', '$contrasena_T_codificada', '4');";
+			//$contrasena_T_codificada=password_hash($contrasena_T, PASSWORD_DEFAULT);
+
+			$consulta="INSERT INTO `tutor` (`ID`, `Nombre`, `Apellido`, `Telefono`, `Usuario`, `Gmail`, `Contraseña`, `Chicos_i`) VALUES ('', '$nombre_T', '$apellido_T', '$telefono_T', '$Usuario_T', '$Email_T', '$contrasena_T', '4');";
 			$resultado= mysqli_query($conexion, $consulta);
 		}
 	?>
