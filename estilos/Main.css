@@ -1,47 +1,36 @@
-
-
-
 body {
     background-color:#d2d9df;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 header{
     text-align: center;
     font-size: 70px;
-	font-family: Roboto;
+	font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #cuerpo{
 	margin-top: 5%; 
-    width: 400px;
-    font-family: Quicksand;
+	font-family: Tahoma, Geneva, sans-serif;
 }
 
 #footer {
     background: #000;
+    position: absolute;
     width: 100%;
     height: auto;
-    margin-bottom: 0px;
     left: 0px;
     right: 0px;
+    margin: 0px;
     bottom: 0px;
-    position: absolute;
-    font-size: smaller;
 }
 
 .info {
+    font-size: smaller;
     color: #fff;
+    margin:0px;
     width: 25%;
-    float: left;
-    text-align: center;
-    margin: 0px;
-}
-
-.form_input {
-    width: 200px;
-    height: 20px;
-    background: rgba(35, 26, 106, 0.2);
     float: left;
 }
