@@ -47,5 +47,9 @@
 
 	<div><input type="submit" name="ida" value="Finalizar"></div>
 	</center>
+
+	<?php
+		echo "funciona el breanch?";
+	?>
 </body>
 </html>
