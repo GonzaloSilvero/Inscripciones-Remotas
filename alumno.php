@@ -12,19 +12,19 @@
 	<article class="colum1">
 	<section>
 		Nombre<br>
-		<input type="text" name="nombreAl" required>
+		<input type="text" name="nombre_A" required>
 
 		<br>Apellido<br>
-		<input type="text" name="apellidoAl" required>
+		<input type="text" name="apellido_A" required>
 
 		<br>Edad<br>
-		<input type="number" name="edadAl" required>
+		<input type="number" name="edad_A" required>
 
 		<br>3 digitos del DNI<br>
-		<input type=" number" name="dniAL" required>
+		<input type="number" name="dni_A" required>
 
 		<br>Domicilio<br>
-		<input type="text" name="domicilioAl" required>
+		<input type="text" name="domicilio_A" required>
 
 		<br>Escuela anterior<br>
 		<input type="text" name="escAnterior" required>
@@ -34,7 +34,7 @@
 		<section>
 			<div class="adjuntados">
 				Adjuntar DNI<br>
-				<input type="file" name="ImagDNIAl" accept="image/*" required>
+				<input type="file" name="ImagDNI_A" accept="image/*" required>
 			</div>
 
 			<div class="adjuntados">
@@ -47,6 +47,31 @@
 		<div id="boton"><input type="submit" name="ida" value="Finalizar"></div>
 	</form>
 	</center>
+
+	<?php
+
+	$conexion =mysqli_connect("localhost", "root", "","sorteo");
+
+
+	//require_once 'conexiones.php';
+		if (isset($_POST['ida'])) {
+
+			//Recoger los valores del formulario de registro
+			$nombre_A= $_POST['nombre_A'];
+			$apellido_A= $_POST['apellido_A'];
+			$edad_A= $_POST['edad_A'];
+			$dni_A= $_POST['dni_A'];
+			$domicilio_A= $_POST['domicilio_A'];
+			$escuelaAnt= $_POST['escAnterior'];
+			$imagenDNI= $_POST['ImagDNI_A'];
+			$constancia= $_POST['constancia'];
+
+			//$contrasena_T_codificada=password_hash($contrasena_T, PASSWORD_DEFAULT);
+
+			$consulta="INSERT INTO `chicos_i` (`ID`, `Nombre`, `Apellido`, `Edad`, `Domicilio`, `Escuela_A`, `dni`, `fotocopia`, `constancia`) VALUES ('4', '$nombre_A', '$apellido_A', '$edad_A', '$domicilio_A', '$escuelaAnt', '$dni_A', '$imagenDNI', '$constancia');";
+			$resultado= mysqli_query($conexion, $consulta);
+		}
+	?>
 
 
 	<!----pie de pagina---->
