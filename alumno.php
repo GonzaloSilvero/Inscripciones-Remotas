@@ -81,10 +81,8 @@
 
 			$consulta="SELECT * FROM `tutor` WHERE `Usuario` = $sesion";
 			$resultado1= mysqli_query($conexion, $consulta);
-			$id_tutor = $resultado1->fetch_array();
-			$id_t= $resultado1['ID'];
+			$id_tutor = mysqli_fetch_assoc($resultado1);
 			echo $id_tutor['ID'];
-			echo $id_t;
 			
 			/*$consulta="INSERT INTO `tienechicos` (`id_tutor`, `id_chicos`) VALUES ($id_tutor['ID'], $id_alumno);";
 			$resultado= mysqli_query($conexion, $consulta);*/
