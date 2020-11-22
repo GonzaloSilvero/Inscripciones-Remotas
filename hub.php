@@ -3,6 +3,7 @@
 <head>
 <?php include 'head.html';?>
 <link href="estilos/album.css" rel="stylesheet">
+<link href="estilos/hub.css" rel="stylesheet">
 <title>Alumnos Registrados</title>
 </head>
 <body>
@@ -65,10 +66,11 @@
         </div>
 		</div>
 		</div>
-    </div>
+	</div>
+	<button class="btn btn-lg btn-secondary btn-block " type="submit">Añadir alumno<br></button>
 </main>
 
-<button class="btn btn-lg btn-secondary btn-block" type="submit">Añadir alumno<br></button>
+
 <?php include 'footer.html';?>
 </body>
 </html>

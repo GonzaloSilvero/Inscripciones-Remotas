@@ -3138,6 +3138,7 @@ fieldset:disabled a.btn {
 .btn-block {
   display: block;
   width: 100%;
+  margin-bottom: 10vw;
 }
 
 .btn-block + .btn-block {
