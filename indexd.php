@@ -19,7 +19,7 @@
 
 		<section>
 			<label>Contraseña<br>
-			<input type="text" name="contrasena"></label>
+			<input type="password" name="contrasena"></label>
 		</section>
 
 			<input type="submit" name="ingresar" value="ingresar">
@@ -27,7 +27,7 @@
 	</form>
 
 	<div id="guiaRegistro">
-		si no eres parte del establecimiento: <a href="tutor.php" >Registrarse</a>
+		si no eres parte del establecimiento: <a href="tutor.php">Registrarse</a>
 	</div>
 	</center>
 	
@@ -49,45 +49,25 @@
 			if ($usuario == $usuarioBase['Usuario']) {
 				
 				if ($contrasena == $usuarioBase['Contraseña']) {
+					session_start();
+					$_SESSION['usuario']=$_POST['usuario'];
 					header("Location: hub.php");
 					die();
+					
 				}
 				else
 				{
-					echo "contraseña mal";
+					echo "contraseña erronea";
 				}
 			}
 			else 
 			{
-				echo "no funciona";
+				echo "usuario invalido";
 			}
+			
 		}
-
+		mysqli_close($conexion);
 	?>
 
-	<!----pie de pagina---->
-	<div id="footer">
-		<div class="conteiner">
-			<div class="row">
-				<div class="col1">
-					<p class="info">
-						Direccion:<br> 
-						bariloche 4455,La Matanza
-					</p>
-					<p class="info">
-						Telefono:<br>
-						(011)4444-5555
-					</p>
-					<p class="info">
-						Gmail:<br>
-						eest14lamatanza@abc.gob.ar
-					</p>
-					<p class="info">
-						&copy; <?=date('y')?> EEST°14, por alumnos
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
 </body>
 </html>

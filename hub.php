@@ -1,47 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Registro Tutor</title>
-	<link rel="stylesheet" type="text/css" href="estilos/hub.css">
-	<link rel="stylesheet" type="text/css" href="estilos/Main.css">
+<?php include 'head.html';?>
+<link href="estilos/album.css" rel="stylesheet">
+<link href="estilos/hub.css" rel="stylesheet">
+<title>Alumnos Registrados</title>
 </head>
 <body>
-	<center>
-	<header>Alumnos Inscriptos</header>
+<main role="main">
+    <h1>Alumnos Registrados </h1>
+    <div class="container">
 
-	<article>
-		<section id="alumnos">
-			
-		</section>
-
-	</article>
-	
-	</center>
-
-
-	<!----pie de pagina---->
-	<div id="footer">
-		<div class="conteiner">
-			<div class="row">
-				<div class="col1">
-					<p class="info">
-						Direccion:<br> 
-						bariloche 4455,La Matanza
-					</p>
-					<p class="info">
-						Telefono:<br>
-						(011)4444-5555
-					</p>
-					<p class="info">
-						Gmail:<br>
-						eest14lamatanza@abc.gob.ar
-					</p>
-					<p class="info">
-						&copy; <?=date('y')?> EEST°14, por alumnos
-					</p>
-				</div>
-			</div>
+    <div class="row">
+        <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            </div>
+        	</div>
+        </div>
+		</div>
 		</div>
 	</div>
+	<button class="btn btn-lg btn-secondary btn-block " type="submit">Añadir alumno<br></button>
+</main>
+
+
+<?php include 'footer.html';?>
 </body>
 </html>
