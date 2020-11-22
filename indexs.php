@@ -1,27 +1,56 @@
 <!DOCTYPE html>
 <html>
+<head>
 <?php include 'head.html';?>
-<body>
-	<center>
-	<header>Formulario de Inscripcion</header>
+<title>Formulario de Inscripcion</title>
+<link href="estilos/signin.css" rel="stylesheet">>
+</head>
+    <body class="text-center">
+        <form class="form-signin">
+            <h1 class="h1">Formulario de inscripcion</h1>
+            <center>
+            <label for="inputTutor" class="sr-only">Usuario</label>
+            <input type="text" id="inputTutor" class="form-control" placeholder="Dni Tutor" required autofocus>
+            <label for="inputAlumn" class="sr-only">Contraseña</label>
+            <input type="text" id="inputAlumn" class="form-control" placeholder="Dni Alumno" required>
+            <button class="btn btn-lg btn-secondary btn-block" type="submit">Ingresar<br></button>
+        </form>
+        
+        si no eres parte del establecimiento: <a href="tutor.php" >Registrarse</a>
+        
+        </center>
+    <?php include 'footer.html';
 
-	<form class="form-signin">
-    <img class="mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-    <div class="checkbox mb-3">
-    <label>
-    <input type="checkbox" value="remember-me"> Remember me
-    </label>
-    </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
-	</form>
-	</center>
-	<!----pie de pagina---->
-	<?php include 'footer.html';?>
-</body>
+        $conexion =mysqli_connect("localhost", "root", "","sorteo");
+            if (isset($_POST['ingresar']))
+            {
+    
+                //Recoger los valores del formulario de registro
+                $usuario = $_POST['usuario'];
+                $contrasena= $_POST['contrasena'];
+    
+                $resultado_usuario= mysqli_query($conexion, "SELECT * FROM `tutor` WHERE `Usuario` = '$usuario' ");
+                $usuarioBase= mysqli_fetch_assoc($resultado_usuario);
+    
+                
+    
+                if ($usuario == $usuarioBase['Usuario']) {
+                    
+                    if ($contrasena == $usuarioBase['Contraseña']) {
+                        header("Location: hub.php");
+                        die();
+                    }
+                    else
+                    {
+                        echo "contraseña mal";
+                    }
+                }
+                else 
+                {
+                    echo "no funciona";
+                }
+            }
+    
+        ?>
+    </body>
 </html>
