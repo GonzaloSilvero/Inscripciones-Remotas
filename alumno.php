@@ -53,12 +53,9 @@
 	if (!isset($_SESSION["usuario"])) {
 	header("location:index.php");
 	}
-
-	$conexion =mysqli_connect("localhost", "root", "","sorteo");
-
-
 		//require_once 'conexiones.php';
-		if (isset($_POST['ida'])) {
+		if (isset($_POST['ida'])) {			
+			$conexion =mysqli_connect("localhost", "root", "","sorteo");
 
 			//Recoger los valores del formulario de registro
 			$nombre_A= $_POST['nombre_A'];
@@ -81,15 +78,19 @@
 
 			$consulta="SELECT * FROM `tutor` WHERE `Usuario` = $sesion";
 			$resultado1= mysqli_query($conexion, $consulta);
-			$id_tutor = mysqli_fetch_assoc($resultado1);
-			echo $id_tutor['ID'];
+			$resultadot = mysqli_fetch_assoc($resultado1);
+			$id_tutor=$resultadot['ID'];
 			
-			/*$consulta="INSERT INTO `tienechicos` (`id_tutor`, `id_chicos`) VALUES ($id_tutor['ID'], $id_alumno);";
-			$resultado= mysqli_query($conexion, $consulta);*/
-			
+			$consulta="INSERT INTO `tienechicos` (`id_tutor`, `id_chicos`) VALUES ('$id_tutor', '$id_alumno');";
+			$resultado= mysqli_query($conexion, $consulta);
+
+			mysqli_close($conexion);
+
+			header("Location: hub.php");
+			die();
 		}
 
-	mysqli_close($conexion);
+	
 	
 	?>
 
