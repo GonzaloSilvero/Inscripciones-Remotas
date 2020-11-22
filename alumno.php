@@ -68,8 +68,10 @@
 
 			//$contrasena_T_codificada=password_hash($contrasena_T, PASSWORD_DEFAULT);
 
-			$consulta="INSERT INTO `chicos_i` (`ID`, `Nombre`, `Apellido`, `Edad`, `Domicilio`, `Escuela_A`, `dni`, `fotocopia`, `constancia`) VALUES ('4', '$nombre_A', '$apellido_A', '$edad_A', '$domicilio_A', '$escuelaAnt', '$dni_A', '$imagenDNI', '$constancia');";
+			$consulta="INSERT INTO `chicos_i` (`Nombre`, `Apellido`, `Edad`, `Domicilio`, `Escuela_A`, `dni`, `fotocopia`, `constancia`) VALUES ('$nombre_A', '$apellido_A', '$edad_A', '$domicilio_A', '$escuelaAnt', '$dni_A', '$imagenDNI', '$constancia');";
 			$resultado= mysqli_query($conexion, $consulta);
+			
+			//$consulta="SELECT 'id' FROM `tutor` WHERE `Usuario` = '$usuario' "
 		}
 	?>
 

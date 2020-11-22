@@ -49,17 +49,18 @@
 			if ($usuario == $usuarioBase['Usuario']) {
 				
 				if ($contrasena == $usuarioBase['Contraseña']) {
+					session_start()
 					header("Location: hub.php");
 					die();
 				}
 				else
 				{
-					echo "contraseña mal";
+					echo "contraseña erronea";
 				}
 			}
 			else 
 			{
-				echo "no funciona";
+				echo "usuario invalido";
 			}
 		}
 
