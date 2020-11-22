@@ -49,11 +49,15 @@
 	</center>
 
 	<?php
+	session_start();
+	if (!isset($_SESSION["usuario"])) {
+	header("location:index.php");
+	}
 
 	$conexion =mysqli_connect("localhost", "root", "","sorteo");
 
 
-	//require_once 'conexiones.php';
+		//require_once 'conexiones.php';
 		if (isset($_POST['ida'])) {
 
 			//Recoger los valores del formulario de registro
@@ -71,8 +75,13 @@
 			$consulta="INSERT INTO `chicos_i` (`Nombre`, `Apellido`, `Edad`, `Domicilio`, `Escuela_A`, `dni`, `fotocopia`, `constancia`) VALUES ('$nombre_A', '$apellido_A', '$edad_A', '$domicilio_A', '$escuelaAnt', '$dni_A', '$imagenDNI', '$constancia');";
 			$resultado= mysqli_query($conexion, $consulta);
 			
+			
 			//$consulta="SELECT 'id' FROM `tutor` WHERE `Usuario` = '$usuario' "
+			
 		}
+
+	mysqli_close($conexion);
+	
 	?>
 
 

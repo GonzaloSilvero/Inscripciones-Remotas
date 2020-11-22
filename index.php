@@ -49,7 +49,8 @@
 			if ($usuario == $usuarioBase['Usuario']) {
 				
 				if ($contrasena == $usuarioBase['Contraseña']) {
-					session_start()
+					session_start();
+					$_SESSION['usuario']=$_POST['usuario'];
 					header("Location: hub.php");
 					die();
 				}
@@ -62,8 +63,9 @@
 			{
 				echo "usuario invalido";
 			}
+			
 		}
-
+		mysqli_close($conexion);
 	?>
 
 	<!----pie de pagina---->
