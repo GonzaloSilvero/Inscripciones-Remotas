@@ -68,7 +68,7 @@
     </div>
 </main>
 
-<button class="btn btn-lg btn-secondary btn-block" type="submit">Ingresar<br></button>
+<button class="btn btn-lg btn-secondary btn-block" type="submit">Añadir alumno<br></button>
 <?php include 'footer.html';?>
 </body>
 </html>
