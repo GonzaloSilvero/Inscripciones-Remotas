@@ -53,6 +53,7 @@
 					$_SESSION['usuario']=$_POST['usuario'];
 					header("Location: hub.php");
 					die();
+					
 				}
 				else
 				{
