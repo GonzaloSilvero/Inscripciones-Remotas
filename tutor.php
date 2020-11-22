@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html>
-<?php include 'head.html';?>
-<title>Registro</title>
-<link href="estilos/signin.css" rel="stylesheet">>
+<head>
+	<title>Registro Tutor</title>
+	<link rel="stylesheet" type="text/css" href="estilos/Tutor.css">
+	<link rel="stylesheet" type="text/css" href="estilos/Main.css">
+</head>
 </head>
 <body>		
+	<header>
+	<center>
+		<div class="Titulo">
+		Registro
+		</div>
+	</center>
+	</header>
+	<!-- -->
 
-	<form class="form-signin" method="POST">
-            <center>
-            <h1 class="h1 mb-3 font-weight-normal">Registro</h1>
-            <label for="inputNombre" class="sr-only">Nombre</label>
-			<input type="text" name="nombre_T" id="inputNombre" class="form-control" placeholder="Nombre" required autofocus>
-			
-            <label for="inputApellido"  class="sr-only">Apellido</label>
-			<input type="text" name="apellido_T" id="inputApellido" class="form-control" placeholder="Apellido" required>
+	<form action="tutor.php" method="POST">
+		<center>
+		<article id="cuerpo">
 
-			<label for="inputTel" class="sr-only">Telefono</label>
-			<input type="text" name="telefono_T" id="inputTel" class="form-control" placeholder="Telefono" required autofocus>
-			
-            <label for="inputEmail" class="sr-only">Email</label>
-			<input type="email" name="email_T" id="inputEmail" class="form-control" placeholder="Email" required>
+			<section>
+				<label>Nombre<br>
+				<input type="text" name="nombre_T" placeholder="Nombre" required></label>
+			</section>
 
-			<label for="inputUsuario" class="sr-only">Usuario</label>
-			<input type="text" name="usuario_T" id="inputUsuario" class="form-control" placeholder="Dni Tutor" required autofocus>
-			
-            <label for="inputContraseña" class="sr-only">Contraseña</label>
-			<input type="text" name="contrasena_T" id="inputContraseña" class="form-control" placeholder="Dni Alumno" required>
-			
-            <button class="btn btn-lg btn-secondary btn-block" type="submit">Ingresar</button>
-            </center>
-        </form>
+			<section>
+				<label>Apellido<br>
+				<input type="text" name="apellido_T" placeholder="Apellido" required></label>
+			</section>
 
+			<section>
+				<label>Telefono<br>
+				<input type="tel" name="telefono_T" placeholder="xx xxxx xxxx" maxlength="10" required></label>
+			</section>
+
+			<section>
+				<label>Email<br>
+				<input type="email" name="email_T" placeholder="ejemplo@gmail.com" required></label>
+			</section>
+
+			<section>
+				<label>Usuario<br>
+				<input type="text" name="usuario_T" placeholder="DNI del tutor" minlength="8" maxlength="8" required></label>
+			</section>
+
+			<section>
+				<label>Contraseña<br>
+				<input type="text" name="contrasena_T" placeholder="DNI del alumno" minlength="8" maxlength="8" required></label>
+			</section>
+
+				<input type="submit" name="ida" value="Registrarse">
+		</article>	
+	</form>
+	</center>
+
+	
 	<?php
-		$conexion = mysqli_connect("localhost", "root", "","sorteo");
+
+	$conexion =mysqli_connect("localhost", "root", "","sorteo");
+
+
+	//require_once 'conexiones.php';
 		if (isset($_POST['ida'])) {
-			
+
 			//Recoger los valores del formulario de registro
 			$nombre_T= $_POST['nombre_T'];
 			$apellido_T= $_POST['apellido_T'];
@@ -45,12 +74,33 @@
 
 			//$contrasena_T_codificada=password_hash($contrasena_T, PASSWORD_DEFAULT);
 
-			$consulta="INSERT INTO `tutor` (`Nombre`, `Apellido`, `Telefono`, `Usuario`, `Gmail`, `Contraseña`) VALUES ('$nombre_T', '$apellido_T', '$telefono_T', '$Usuario_T', '$Email_T', '$contrasena_T');";
-			
+			$consulta="INSERT INTO `tutor` (`ID`, `Nombre`, `Apellido`, `Telefono`, `Usuario`, `Gmail`, `Contraseña`, `Chicos_i`) VALUES ('', '$nombre_T', '$apellido_T', '$telefono_T', '$Usuario_T', '$Email_T', '$contrasena_T', '1');";
+			$resultado= mysqli_query($conexion, $consulta);
 		}
-		$resultado= mysqli_query($conexion, $consulta);
 	?>
 
-<?php include 'footer.html';?>
+	<div id="footer">
+		<div class="conteiner">
+			<div class="row">
+				<div class="col1">
+					<p class="info">
+						Direccion:<br> 
+						bariloche 4455,La Matanza
+					</p>
+					<p class="info">
+						Telefono:<br>
+						(011)4444-5555
+					</p>
+					<p class="info">
+						Gmail:<br>
+						eest14lamatanza@abc.gob.ar
+					</p>
+					<p class="info">
+						&copy; <?=date('y')?> EEST°14, por alumnos
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
