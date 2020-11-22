@@ -32,8 +32,9 @@
         </form>
 
 	<?php
+		$conexion = mysqli_connect("localhost", "root", "","sorteo");
 		if (isset($_POST['ida'])) {
-			$conexion = mysqli_connect("localhost", "root", "","sorteo");
+			
 			//Recoger los valores del formulario de registro
 			$nombre_T= $_POST['nombre_T'];
 			$apellido_T= $_POST['apellido_T'];
@@ -45,8 +46,9 @@
 			//$contrasena_T_codificada=password_hash($contrasena_T, PASSWORD_DEFAULT);
 
 			$consulta="INSERT INTO `tutor` (`Nombre`, `Apellido`, `Telefono`, `Usuario`, `Gmail`, `Contraseña`) VALUES ('$nombre_T', '$apellido_T', '$telefono_T', '$Usuario_T', '$Email_T', '$contrasena_T');";
-			$resultado= mysqli_query($conexion, $consulta);
+			
 		}
+		$resultado= mysqli_query($conexion, $consulta);
 	?>
 
 <?php include 'footer.html';?>
