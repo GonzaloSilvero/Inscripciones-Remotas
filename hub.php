@@ -12,6 +12,18 @@
 	<center>
 	<h1>Alumnos Registrados</h1>
 
+
+	<?php
+		session_start();
+		if (!isset($_SESSION["usuario"])) {
+		header("location:index.php");
+		}
+
+		/*if (condition) {
+			# code...
+		}*/
+	?>
+
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xg-4">

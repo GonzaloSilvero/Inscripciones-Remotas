@@ -75,8 +75,19 @@
 			$consulta="INSERT INTO `chicos_i` (`Nombre`, `Apellido`, `Edad`, `Domicilio`, `Escuela_A`, `dni`, `fotocopia`, `constancia`) VALUES ('$nombre_A', '$apellido_A', '$edad_A', '$domicilio_A', '$escuelaAnt', '$dni_A', '$imagenDNI', '$constancia');";
 			$resultado= mysqli_query($conexion, $consulta);
 			
+			$id_alumno= $conexion->insert_id;
+
+			$sesion=$_SESSION['usuario'];
+
+			$consulta="SELECT * FROM `tutor` WHERE `Usuario` = $sesion";
+			$resultado1= mysqli_query($conexion, $consulta);
+			$id_tutor = $resultado1->fetch_array();
+			$id_t= $resultado1['ID'];
+			echo $id_tutor['ID'];
+			echo $id_t;
 			
-			//$consulta="SELECT 'id' FROM `tutor` WHERE `Usuario` = '$usuario' "
+			/*$consulta="INSERT INTO `tienechicos` (`id_tutor`, `id_chicos`) VALUES ($id_tutor['ID'], $id_alumno);";
+			$resultado= mysqli_query($conexion, $consulta);*/
 			
 		}
 
