@@ -7,7 +7,7 @@
 </head>
 <body>
 			
-        <form class="form-signin" action="tutor.php" method="POST">
+        <form class="form-signin" action="alumno.php" method="POST">
             <center>
 			<h1 class="h1 mb-3 font-weight-normal">Ingresante</h1>
 			<article>
