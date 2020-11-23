@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Alumnos</title>
-	<?php include 'head.html';?>
+<?php include 'head.html';?>
+<link href="estilos/album.css" rel="stylesheet">
+<title>Alumnos Registrados</title>
 </head>
 	<?php
 		session_start();

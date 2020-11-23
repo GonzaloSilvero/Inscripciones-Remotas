@@ -1,40 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registro Tutor</title>
-	<link rel="stylesheet" type="text/css" href="estilos/Alumno.css">
-	<link rel="stylesheet" type="text/css" href="estilos/Main.css">
+	<title>Formulario Ingresante</title>
+	<?php include 'head.html';?>
 </head>
 <body>
-	<?php
-		session_start();
-		if (!isset($_SESSION["usuario"])) {
-			header("location:index.php");
-		}
-	?>
-	<center>
-	<header>Alumno</header>
-	<form action="alumno.php" method="POST">
-	<article class="colum1">
-	<section>
-		Nombre<br>
-		<input type="text" name="nombre_A" required>
+			<h1 class="h1 mb-3 font-weight-normal">Ingresante</h1>
+        <form class="form-signin" action="tutor.php" method="POST">
+            <center>
+			
+			<input type="text" id="inputNombre" class="form-control" name="nombre_T" placeholder="Nombre" required autofocus>
+			
+			<input type="text" id="inputApellido" class="form-control" name="apellido_T" placeholder="Apellido" required>
 
-		<br>Apellido<br>
-		<input type="text" name="apellido_A" required>
+			<input type="tel" id="inputTel" class="form-control" name="telefono_T" maxlength="10" placeholder="Edad" required autofocus>
+			
+			<input type="email" id="inputEmail" class="form-control" name="email_T" placeholder="Ultimos 3 digitos del DNI" required>
 
-		<br>Edad<br>
-		<input type="number" name="edad_A" required>
-
-		<br>3 digitos del DNI<br>
-		<input type="number" name="dni_A" required>
-
-		<br>Domicilio<br>
-		<input type="text" name="domicilio_A" required>
-
-		<br>Escuela anterior<br>
-		<input type="text" name="escAnterior" required>
-		</article>
+			<input type="text" id="inputUsuario" class="form-control" name="usuario_T" minlength="8" maxlength="8" placeholder="Domicilio" required autofocus>
+			
+			<input type="text" id="inputContraseña" class="form-control" name="contrasena_T" minlength="8" maxlength="8" placeholder="Escuela anterior" required>
+			
+            <button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Ingresar</button>
+            </center>
+        </form>
 		
 		<article class="colum2">
 		<section>
@@ -52,9 +41,13 @@
 
 		<div id="boton"><input type="submit" name="ida" value="Finalizar"></div>
 	</form>
-	</center>
+
 
 	<?php
+	session_start();
+	if (!isset($_SESSION["usuario"])) {
+	header("location:index.php");
+	}
 		//require_once 'conexiones.php';
 		if (isset($_POST['ida'])) {			
 			$conexion =mysqli_connect("localhost", "root", "","sorteo");
@@ -93,33 +86,7 @@
 		}
 
 	
-	
+		include 'footer.html';
 	?>
-
-
-	<!----pie de pagina---->
-	<div id="footer">
-		<div class="conteiner">
-			<div class="row">
-				<div class="col1">
-					<p class="info">
-						Direccion:<br> 
-						bariloche 4455,La Matanza
-					</p>
-					<p class="info">
-						Telefono:<br>
-						(011)4444-5555
-					</p>
-					<p class="info">
-						Gmail:<br>
-						eest14lamatanza@abc.gob.ar
-					</p>
-					<p class="info">
-						&copy; <?=date('y')?> EEST°14, por alumnos
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
 </body>
 </html>
