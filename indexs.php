@@ -23,7 +23,7 @@
         <?php
             
         
-            if (isset($_POST['ingresar']))
+            /*if (isset($_POST['ingresar']))
             {
                 $conexion =mysqli_connect("localhost", "root", "","sorteo");
                 //Recoger los valores del formulario de registro
@@ -54,7 +54,7 @@
                     echo "usuario invalido";
                 }
                 mysqli_close($conexion);
-            }
+            }*/
 
             include 'footer.html';?>
     </body>
