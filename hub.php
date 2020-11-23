@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php include 'head.html';?>
-<link href="estilos/album.css" rel="stylesheet">
-<title>Alumnos Registrados</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Alumnos</title>
+	<link rel="stylesheet" type="text/css" href="estilos/Main.css">
+	<link rel="stylesheet" type="text/css" href="estilos/hub.css">
+	<link rel="stylesheet" type="text/css" href="estilos/bootstrap.css">
 </head>
 <?php
 /*		session_start();
@@ -14,9 +17,8 @@
 
 	*/?>
 <body>
-<main role="main">
-    <h1>Alumnos Registrados </h1>
-    <div class="container">
+	<center>
+	<h1>Alumnos Registrados</h1>
 
     <div class="row">
         <div class="col-md-4">

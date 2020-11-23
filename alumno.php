@@ -49,12 +49,13 @@
 	</center>
 
 	<?php
-
-	$conexion =mysqli_connect("localhost", "root", "","sorteo");
-
-
-	//require_once 'conexiones.php';
-		if (isset($_POST['ida'])) {
+	session_start();
+	if (!isset($_SESSION["usuario"])) {
+	header("location:index.php");
+	}
+		//require_once 'conexiones.php';
+		if (isset($_POST['ida'])) {			
+			$conexion =mysqli_connect("localhost", "root", "","sorteo");
 
 			//Recoger los valores del formulario de registro
 			$nombre_A= $_POST['nombre_A'];
@@ -68,9 +69,29 @@
 
 			//$contrasena_T_codificada=password_hash($contrasena_T, PASSWORD_DEFAULT);
 
-			$consulta="INSERT INTO `chicos_i` (`ID`, `Nombre`, `Apellido`, `Edad`, `Domicilio`, `Escuela_A`, `dni`, `fotocopia`, `constancia`) VALUES ('4', '$nombre_A', '$apellido_A', '$edad_A', '$domicilio_A', '$escuelaAnt', '$dni_A', '$imagenDNI', '$constancia');";
+			$consulta="INSERT INTO `chicos_i` (`Nombre`, `Apellido`, `Edad`, `Domicilio`, `Escuela_A`, `dni`, `fotocopia`, `constancia`) VALUES ('$nombre_A', '$apellido_A', '$edad_A', '$domicilio_A', '$escuelaAnt', '$dni_A', '$imagenDNI', '$constancia');";
 			$resultado= mysqli_query($conexion, $consulta);
+			
+			$id_alumno= $conexion->insert_id;
+
+			$sesion=$_SESSION['usuario'];
+
+			$consulta="SELECT * FROM `tutor` WHERE `Usuario` = $sesion";
+			$resultado1= mysqli_query($conexion, $consulta);
+			$resultadot = mysqli_fetch_assoc($resultado1);
+			$id_tutor=$resultadot['ID'];
+			
+			$consulta="INSERT INTO `tienechicos` (`id_tutor`, `id_chicos`) VALUES ('$id_tutor', '$id_alumno');";
+			$resultado= mysqli_query($conexion, $consulta);
+
+			mysqli_close($conexion);
+
+			header("Location: hub.php");
+			die();
 		}
+
+	
+	
 	?>
 
 
