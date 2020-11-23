@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Alumnos</title>
-	<?php include 'head.html';?>
+<?php include 'head.html';?>
+<link href="estilos/album.css" rel="stylesheet">
+<title>Alumnos Registrados</title>
 </head>
-	<?php
-		/*session_start();
+<?php
+/*		session_start();
 		if (!isset($_SESSION["usuario"])) {
-			header("location:index.php");
-		}*/
-	?>
+		header("location:index.php");
+		}
+
+
+	*/?>
 <body>
-	<h1>Alumnos Registrados</h1>
+<main role="main">
+    <h1>Alumnos Registrados </h1>
+    <div class="container">
 
     <div class="row">
         <div class="col-md-4">
@@ -67,7 +72,7 @@
         </div>
         </div>
 	</div>
-	<a href="alumno.php"><button  class="btn btn-lg btn-dark btn-block " type="submit" href="alumno.php">Añadir alumno<br></button></a>
+	<a href="alumno.php"> <button  class="btn btn-lg btn-dark btn-block " type="submit">Añadir alumno<br></button></a>
 </main>
 
 
