@@ -6,6 +6,14 @@
 <link href="estilos/hub.css" rel="stylesheet">
 <title>Alumnos Registrados</title>
 </head>
+<?php
+		session_start();
+		if (!isset($_SESSION["usuario"])) {
+		header("location:index.php");
+		}
+
+
+	?>
 <body>
 <main role="main">
     <h1>Alumnos Registrados </h1>
@@ -69,6 +77,7 @@
 	</div>
 	<button class="btn btn-lg btn-secondary btn-block " type="submit">Añadir alumno<br></button>
 </main>
+
 
 
 <?php include 'footer.html';?>
