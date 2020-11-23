@@ -8,58 +8,77 @@
 	<link rel="stylesheet" type="text/css" href="estilos/hub.css">
 	<link rel="stylesheet" type="text/css" href="estilos/bootstrap.css">
 </head>
-<body>
-	<center>
-	<h1>Alumnos Registrados</h1>
-
-
-	<?php
-		session_start();
+<?php
+/*		session_start();
 		if (!isset($_SESSION["usuario"])) {
 		header("location:index.php");
 		}
 
-		/*if (condition) {
-			# code...
-		}*/
-	?>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xg-4">
-				<div class="card" style="width: 18rem;">
-					<div class="card-body">
-					    <h5 class="card-title">Special title treatment</h5>
-					    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xg-4">
-				<div class="card" style="width: 18rem;">
-					<div class="card-body">
-					    <h5 class="card-title">Special title treatment</h5>
-					    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xg-4">
-				<div class="card" style="width: 18rem;">
-					<div class="card-body">
-					    <h5 class="card-title">Special title treatment</h5>
-					    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-					    <a href="#" class="btn btn-primary">Go somewhere</a>
-					</div>
-				</div>
-			</div>
-		</div>
+	*/?>
+<body>
+	<center>
+	<h1>Alumnos Registrados</h1>
+
+    <div class="row">
+        <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <a href="#" class="btn btn-secondary">Go somewhere</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <a href="#" class="btn btn-secondary">Go somewhere</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <a href="#" class="btn btn-secondary">Go somewhere</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <a href="#" class="btn btn-secondary">Go somewhere</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
 	</div>
-	</center>
+	<button  class="btn btn-lg btn-dark btn-block " type="submit">Añadir alumno<br></button>
+</main>
 
-	
 
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.js"></script>
+
+<?php include 'footer.html';?>
 </body>
 </html>
