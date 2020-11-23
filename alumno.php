@@ -6,6 +6,12 @@
 	<link rel="stylesheet" type="text/css" href="estilos/Main.css">
 </head>
 <body>
+	<?php
+		session_start();
+		if (!isset($_SESSION["usuario"])) {
+			header("location:index.php");
+		}
+	?>
 	<center>
 	<header>Alumno</header>
 	<form action="alumno.php" method="POST">
@@ -49,10 +55,6 @@
 	</center>
 
 	<?php
-	session_start();
-	if (!isset($_SESSION["usuario"])) {
-	header("location:index.php");
-	}
 		//require_once 'conexiones.php';
 		if (isset($_POST['ida'])) {			
 			$conexion =mysqli_connect("localhost", "root", "","sorteo");
