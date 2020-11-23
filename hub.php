@@ -1,23 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Alumnos</title>
-	<link rel="stylesheet" type="text/css" href="estilos/Main.css">
-	<link rel="stylesheet" type="text/css" href="estilos/hub.css">
-	<link rel="stylesheet" type="text/css" href="estilos/bootstrap.css">
+	<?php include 'head.html';?>
 </head>
-<?php
-/*		session_start();
+	<?php
+		/*session_start();
 		if (!isset($_SESSION["usuario"])) {
-		header("location:index.php");
-		}
-
-
-	*/?>
+			header("location:index.php");
+		}*/
+	?>
 <body>
-	<center>
 	<h1>Alumnos Registrados</h1>
 
     <div class="row">
@@ -74,7 +67,7 @@
         </div>
         </div>
 	</div>
-	<button  class="btn btn-lg btn-dark btn-block " type="submit">Añadir alumno<br></button>
+	<a href="alumno.php"><button  class="btn btn-lg btn-dark btn-block " type="submit" href="alumno.php">Añadir alumno<br></button></a>
 </main>
 
 

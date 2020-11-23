@@ -6,7 +6,7 @@
 <link href="estilos/signin.css" rel="stylesheet">
 </head>
     <body class="text-center">
-        <form class="form-signin">
+        <form class="form-signin" action="index.php" method="POST">
             <h1 class="h1">Formulario de inscripcion</h1>
             <center>
             <label for="inputTutor" class="sr-only">Usuario<br></label>
@@ -22,8 +22,8 @@
 
         <?php
             
-        
-            /*if (isset($_POST['ingresar']))
+
+            if (isset($_POST['ingresar']))
             {
                 $conexion =mysqli_connect("localhost", "root", "","sorteo");
                 //Recoger los valores del formulario de registro
@@ -35,9 +35,8 @@
 
                 
 
-                if ($usuario == $usuarioBase['usuario']) {
-                    
-                    if ($contrasena == $usuarioBase['contraseña']) {
+                if ($usuario == $usuarioBase['Usuario']) {
+                    if ($contrasena == $usuarioBase['Contraseña']) {
                         session_start();
                         $_SESSION['usuario']=$_POST['usuario'];
                         header("Location: hub.php");
@@ -54,8 +53,9 @@
                     echo "usuario invalido";
                 }
                 mysqli_close($conexion);
-            }*/
-
-            include 'footer.html';?>
+            }
+           
+            include 'footer.html';
+            ?>
     </body>
 </html>

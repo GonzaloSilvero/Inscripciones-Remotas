@@ -45,17 +45,16 @@
 			$Email_T= $_POST['email_T'];
 			$Usuario_T= $_POST['usuario_T'];
 			$contrasena_T= $_POST['contrasena_T'];
-
 			//$contrasena_T_codificada=password_hash($contrasena_T, PASSWORD_DEFAULT);
-
 			$consulta="INSERT INTO `tutor` (`Nombre`, `Apellido`, `Telefono`, `Usuario`, `Gmail`, `Contraseña`) VALUES ('$nombre_T', '$apellido_T', '$telefono_T', '$Usuario_T', '$Email_T', '$contrasena_T');";
 			$resultado= mysqli_query($conexion, $consulta);
 
 			header("Location: index.php");
 			die();
 		}
-		include 'footer.html';?>
+		include 'footer.html';
+	?>
 
-
+	
 </body>
 </html>
