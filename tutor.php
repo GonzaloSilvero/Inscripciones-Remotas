@@ -54,8 +54,8 @@
 			header("Location: index.php");
 			die();
 		}
-	?>
+		include 'footer.html';?>
 
-<?php include 'footer.html';?>
+
 </body>
 </html>

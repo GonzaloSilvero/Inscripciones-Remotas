@@ -61,7 +61,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #d2d9df;
-  margin-bottom: 100vw;
+  /*margin-bottom: 100vw;*/
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -284,7 +284,7 @@ button,
   [type="reset"]:not(:disabled),
   [type="submit"]:not(:disabled) {
     cursor: pointer;
-    width: 10vw;
+    width: 60vw;
   }
 }
 
@@ -294,17 +294,17 @@ button,
   [type="reset"]:not(:disabled),
   [type="submit"]:not(:disabled) {
     cursor: pointer;
-    width: 10vw;
+    width: 60vw;
   }
 }
 
-@media (max-width:798px){
+@media (max-width:992px){
   button:not(:disabled),
   [type="button"]:not(:disabled),
   [type="reset"]:not(:disabled),
   [type="submit"]:not(:disabled) {
     cursor: pointer;
-    width: 12vw;
+    width: 62vw;
   }
 }
 
