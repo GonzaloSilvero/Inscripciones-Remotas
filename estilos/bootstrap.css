@@ -61,6 +61,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #d2d9df;
+  margin-bottom: 100vw;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -231,6 +232,7 @@ label {
 button {
   border-radius: 0;
   width: 100px;
+  bottom: 0px;
 }
 
 button:focus {
@@ -274,12 +276,36 @@ button,
   -webkit-appearance: button;
 }
 
-button:not(:disabled),
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled) {
-  cursor: pointer;
-  width: 110px;
+/*este tiene las caracteristicas del boton*/
+
+@media (max-width:576px){
+  button:not(:disabled),
+  [type="button"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  [type="submit"]:not(:disabled) {
+    cursor: pointer;
+    width: 10vw;
+  }
+}
+
+@media (max-width:798px){
+  button:not(:disabled),
+  [type="button"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  [type="submit"]:not(:disabled) {
+    cursor: pointer;
+    width: 10vw;
+  }
+}
+
+@media (max-width:798px){
+  button:not(:disabled),
+  [type="button"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  [type="submit"]:not(:disabled) {
+    cursor: pointer;
+    width: 12vw;
+  }
 }
 
 button::-moz-focus-inner,
@@ -2587,7 +2613,6 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  width: 100px;
   background-color: #6c757d;
   border-color: #6c757d;
 }
@@ -3121,10 +3146,11 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
+/*Parte de adentro de los botones largos*/
 .btn-lg, .btn-group-lg > .btn {
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  padding: 0.3rem 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
   border-radius: 0.3rem;
 }
 
@@ -3138,7 +3164,6 @@ fieldset:disabled a.btn {
 .btn-block {
   display: block;
   width: 100%;
-  margin-bottom: 10vw;
 }
 
 .btn-block + .btn-block {
@@ -3148,7 +3173,7 @@ fieldset:disabled a.btn {
 input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
-  width: 100;
+  width: 100px;
 }
 
 .fade {
