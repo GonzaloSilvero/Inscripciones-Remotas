@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <?php include 'head.html';?>
-<title>Registro</title>
 <link href="estilos/signin.css" rel="stylesheet">
+<title>Registro</title>
 </head>
 <body>		
 

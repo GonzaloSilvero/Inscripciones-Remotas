@@ -3,41 +3,45 @@
 <head>
 	<title>Formulario Ingresante</title>
 	<?php include 'head.html';?>
+	<link href="estilos/signin.css" rel="stylesheet">
 </head>
 <body>
-			<h1 class="h1 mb-3 font-weight-normal">Ingresante</h1>
+			
         <form class="form-signin" action="tutor.php" method="POST">
             <center>
-			
-			<input type="text" id="inputNombre" class="form-control" name="nombre_T" placeholder="Nombre" required autofocus>
-			
-			<input type="text" id="inputApellido" class="form-control" name="apellido_T" placeholder="Apellido" required>
+			<h1 class="h1 mb-3 font-weight-normal">Ingresante</h1>
+			<article>
+				<section>
+					<input type="text" class="form-control" name="nombre_A" placeholder="Nombre" required autofocus>
+				
+					<input type="text" class="form-control" name="apellido_A" placeholder="Apellido" required>
 
-			<input type="tel" id="inputTel" class="form-control" name="telefono_T" maxlength="10" placeholder="Edad" required autofocus>
-			
-			<input type="email" id="inputEmail" class="form-control" name="email_T" placeholder="Ultimos 3 digitos del DNI" required>
+					<input type="text" class="form-control" name="edad_A" maxlength="2" placeholder="Edad" required autofocus>
+																																				
+					<input type="text" class="form-control" name="dni_A" maxlength="3" placeholder="Ultimos 3 digitos del DNI" required>
 
-			<input type="text" id="inputUsuario" class="form-control" name="usuario_T" minlength="8" maxlength="8" placeholder="Domicilio" required autofocus>
-			
-			<input type="text" id="inputContraseña" class="form-control" name="contrasena_T" minlength="8" maxlength="8" placeholder="Escuela anterior" required>
-			
-            <button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Ingresar</button>
-            </center>
+					<input type="text"  class="form-control" name="domicilio_A" placeholder="Domicilio" required autofocus>
+					
+					<input type="text" class="form-control" name="escAnterior" placeholder="Escuela anterior" required>
+					
+					<button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Ingresar</button>
+				</section>
+			</article>
+			<article>
+				<section> 
+					<div class="adjuntados">
+						Adjuntar DNI<br>
+						<input type="file" name="ImagDNI_A" accept="image/*" required>
+					</div>
+
+					<div class="adjuntados">
+						Adjuntar Constancia<br>
+						<input type="file" name="constancia" accept="image/*" required>
+					</div>
+				</section>
+			</article>
+			</center>
         </form>
-		
-		<article class="colum2">
-		<section>
-			<div class="adjuntados">
-				Adjuntar DNI<br>
-				<input type="file" name="ImagDNI_A" accept="image/*" required>
-			</div>
-
-			<div class="adjuntados">
-				Adjuntar Constancia<br>
-				<input type="file" name="constancia" accept="image/*" required>
-			</div>
-		</section>	
-		</article>
 
 		<div id="boton"><input type="submit" name="ida" value="Finalizar"></div>
 	</form>
