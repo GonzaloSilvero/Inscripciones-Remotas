@@ -25,9 +25,9 @@
 	$busqueda="SELECT * FROM `tienechicos` WHERE `id_tutor` = $id_tutor";
 	$resultado1= mysqli_query($conexion, $busqueda);
 
+	$contador=0;
 	
-	
-		echo"<div class='row'>";
+	echo"<div class='row'>";
 		while($resultadot = mysqli_fetch_assoc($resultado1)){
 			$id_chico=$resultadot['id_chicos'];
 			$seleccion="SELECT * FROM `chicos_i` WHERE `ID` = $id_chico";
@@ -41,8 +41,8 @@
 						echo"<p class='card-text'>"."dni: ".$seleccionado['dni']."<br>"."edad: ".$seleccionado['Edad']."</p>";
 						echo"<div class='d-flex justify-content-between align-items-center'>";
 					echo"<div class='btn-group'>";
-					$_SESSION['id_alumno']=$seleccionado['ID'];
-					echo"<a href='#' class='btn btn-secondary'>"."Revisar"."</a>";
+					
+					echo"<a href='datosAlumno.php' class='btn btn-secondary'>"."Revisar"."</a>";
 					echo"</div>";
 				echo"</div>";
 				echo"</div>";
