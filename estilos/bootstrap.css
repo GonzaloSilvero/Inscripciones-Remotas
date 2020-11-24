@@ -61,7 +61,8 @@ body {
   color: #212529;
   text-align: left;
   background-color: #d2d9df;
-  /*margin-bottom: 100vw;*/
+  margin-bottom: 75px;
+  width: 90%;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -76,16 +77,18 @@ hr {
 
 h1 {
   text-align: center;
+  top: 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 1px;
+  margin-bottom: 100px;
 }
 
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
 abbr[title],
@@ -278,23 +281,32 @@ button,
 
 /*este tiene las caracteristicas del boton*/
 
-@media (max-width:576px){
+@media (min-width:576px){
   button:not(:disabled),
   [type="button"]:not(:disabled),
   [type="reset"]:not(:disabled),
   [type="submit"]:not(:disabled) {
     cursor: pointer;
-    width: 60vw;
+    width: 1vw;
   }
 }
 
-@media (max-width:798px){
+@media (min-width:798px){
   button:not(:disabled),
   [type="button"]:not(:disabled),
   [type="reset"]:not(:disabled),
   [type="submit"]:not(:disabled) {
     cursor: pointer;
-    width: 60vw;
+    width: 1vw;
+  }
+}
+@media (min-width:892px){
+  button:not(:disabled),
+  [type="button"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  [type="submit"]:not(:disabled) {
+    cursor: pointer;
+    width:15vw;
   }
 }
 
@@ -304,7 +316,7 @@ button,
   [type="reset"]:not(:disabled),
   [type="submit"]:not(:disabled) {
     cursor: pointer;
-    width: 62vw;
+    width:60vw;
   }
 }
 

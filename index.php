@@ -2,8 +2,8 @@
 <html>
 <head>
 <?php include 'head.html';?>
-<title>Formulario de Inscripcion</title>
 <link href="estilos/signin.css" rel="stylesheet">
+<title>Formulario de Inscripcion</title>
 </head>
     <body class="text-center">
         <form class="form-signin" action="index.php" method="POST">
@@ -60,7 +60,7 @@
                 }
                 mysqli_close($conexion);
             }
-           
+            
             include 'footer.html';
             ?>
     </body>

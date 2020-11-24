@@ -37,7 +37,7 @@
 			echo"<div class='col-md-4'>";
 				echo"<div class='card mb-4 shadow-sm'>";
 					echo"<div class='card-body'>";
-						echo"<h5 class='card-title'>".$seleccionado['Nombre']." ".$seleccionado['Apellido']."</h5>";
+						echo"<h4 class='card-title'>".$seleccionado['Nombre']." ".$seleccionado['Apellido']."</h4>";
 						echo"<p class='card-text'>"."dni: ".$seleccionado['dni']."<br>"."edad: ".$seleccionado['Edad']."</p>";
 						echo"<div class='d-flex justify-content-between align-items-center'>";
 					echo"<div class='btn-group'>";
