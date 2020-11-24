@@ -1,82 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Formulario Ingresante</title>
-	<?php include 'head.html';?>
-	<link href="estilos/signin.css" rel="stylesheet">
-	<link href="estilos/revisar.css" rel="stylesheet">
+<?php include 'head.html';?>
+<link href="estilos/signin.css" rel="stylesheet">
+<title>Registro</title>
 </head>
-<?php
-		session_start();
-		if (!isset($_SESSION["usuario"])) {
-			header("location:index.php");
-		}
-	?>
-<body>
-	<article class="articulo">
-		<center>
-			<h1 class="h1 mb-3 font-weight-normal">Ingresante</h1>
+<body>		
 
-					<input type="text" class="form-control" name="nombre_A" placeholder="Nombre" required autofocus disabled>
-				
-					<input type="text" class="form-control" name="apellido_A" placeholder="Apellido" required disabled>
+	<form class="form-signin" action="tutor.php" method="POST">
+            <center>
+            <h1 class="h1 mb-3 font-weight-normal">Registro</h1>
+			<input type="text" id="inputNombre" class="form-control" name="nombre_T" placeholder="Nombre" required autofocus disabled >
+			
+			<input type="text" id="inputApellido" class="form-control" name="apellido_T" placeholder="Apellido" required disabled>
 
-					<input type="text" class="form-control" name="edad_A" maxlength="2" placeholder="Edad" required autofocus disabled>
-																																				
-					<input type="text" class="form-control" name="dni_A" maxlength="3" placeholder="Ultimos 3 digitos del DNI" required disabled>
+			<input type="tel" id="inputTel" class="form-control" name="telefono_T" maxlength="10" placeholder="Telefono" required autofocus disabled>
+			
+			<input type="email" id="inputEmail" class="form-control" name="email_T" placeholder="Email" required disabled>
 
-					<input type="text"  class="form-control" name="domicilio_A" placeholder="Domicilio" required autofocus disabled>
-					
-					<input type="text" class="form-control" name="escAnterior" placeholder="Escuela anterior" required disabled>
-					
-					<button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">volver</button>
-		</center>
-	</article>
-
+			<input type="text" id="inputUsuario" class="form-control" name="usuario_T" minlength="8" maxlength="8" placeholder="Dni Tutor" required autofocus disabled>
+			
+			<input type="text" id="inputContraseña" class="form-control" name="contrasena_T" minlength="8" maxlength="8" placeholder="Dni Alumno" required disabled>
+			
+            <button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Volver</button>
+            </center>
+        </form>
 	<?php
-	session_start();
-	if (!isset($_SESSION["usuario"])) {
-	header("location:index.php");
-	}
-		//require_once 'conexiones.php';
-		if (isset($_POST['ida'])) {			
-			$conexion =mysqli_connect("localhost", "root", "","sorteo");
 
+	$conexion =mysqli_connect("localhost", "root", "","sorteo");
+
+
+	//require_once 'conexiones.php';
+		if (isset($_POST['ida'])) {
+			
 			//Recoger los valores del formulario de registro
-			$nombre_A= $_POST['nombre_A'];
-			$apellido_A= $_POST['apellido_A'];
-			$edad_A= $_POST['edad_A'];
-			$dni_A= $_POST['dni_A'];
-			$domicilio_A= $_POST['domicilio_A'];
-			$escuelaAnt= $_POST['escAnterior'];
-			$imagenDNI= $_POST['ImagDNI_A'];
-			$constancia= $_POST['constancia'];
-
+			$nombre_T= $_POST['nombre_T'];
+			$apellido_T= $_POST['apellido_T'];
+			$telefono_T= $_POST['telefono_T'];
+			$Email_T= $_POST['email_T'];
+			$Usuario_T= $_POST['usuario_T'];
+			$contrasena_T= $_POST['contrasena_T'];
 			//$contrasena_T_codificada=password_hash($contrasena_T, PASSWORD_DEFAULT);
-
-			$consulta="INSERT INTO `chicos_i` (`Nombre`, `Apellido`, `Edad`, `Domicilio`, `Escuela_A`, `dni`, `fotocopia`, `constancia`) VALUES ('$nombre_A', '$apellido_A', '$edad_A', '$domicilio_A', '$escuelaAnt', '$dni_A', '$imagenDNI', '$constancia');";
-			$resultado= mysqli_query($conexion, $consulta);
-			
-			$id_alumno= $conexion->insert_id;
-
-			$sesion=$_SESSION['usuario'];
-
-			$consulta="SELECT * FROM `tutor` WHERE `Usuario` = $sesion";
-			$resultado1= mysqli_query($conexion, $consulta);
-			$resultadot = mysqli_fetch_assoc($resultado1);
-			$id_tutor=$resultadot['ID'];
-			
-			$consulta="INSERT INTO `tienechicos` (`id_tutor`, `id_chicos`) VALUES ('$id_tutor', '$id_alumno');";
+			$consulta="INSERT INTO `tutor` (`Nombre`, `Apellido`, `Telefono`, `Usuario`, `Gmail`, `Contraseña`) VALUES ('$nombre_T', '$apellido_T', '$telefono_T', '$Usuario_T', '$Email_T', '$contrasena_T');";
 			$resultado= mysqli_query($conexion, $consulta);
 
-			mysqli_close($conexion);
-
-			header("Location: hub.php");
+			header("Location: index.php");
 			die();
 		}
-
-	
 		include 'footer.html';
 	?>
+
+	
 </body>
 </html>
