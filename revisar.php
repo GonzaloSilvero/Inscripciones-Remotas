@@ -4,47 +4,34 @@
 	<title>Formulario Ingresante</title>
 	<?php include 'head.html';?>
 	<link href="estilos/signin.css" rel="stylesheet">
-	<link href="estilos/alumno.css" rel="stylesheet">
+	<link href="estilos/revisar.css" rel="stylesheet">
 </head>
+<?php
+		session_start();
+		if (!isset($_SESSION["usuario"])) {
+			header("location:index.php");
+		}
+	?>
 <body>
-
-        <form class="form-signin" action="alumno.php" method="POST">
-            <center>
+	<article class="articulo">
+		<center>
 			<h1 class="h1 mb-3 font-weight-normal">Ingresante</h1>
-			<article class="column1">
-				<section >
-					<input type="text" class="form-control" name="nombre_A" placeholder="Nombre" required autofocus>
 
-					<input type="text" class="form-control" name="apellido_A" placeholder="Apellido" required>
+					<input type="text" class="form-control" name="nombre_A" placeholder="Nombre" required autofocus disabled>
+				
+					<input type="text" class="form-control" name="apellido_A" placeholder="Apellido" required disabled>
 
-					<input type="text" class="form-control" name="edad_A" maxlength="2" placeholder="Edad" required autofocus>
+					<input type="text" class="form-control" name="edad_A" maxlength="2" placeholder="Edad" required autofocus disabled>
+																																				
+					<input type="text" class="form-control" name="dni_A" maxlength="3" placeholder="Ultimos 3 digitos del DNI" required disabled>
 
-					<input type="text" class="form-control" name="dni_A" maxlength="3" placeholder="Ultimos 3 digitos del DNI" required>
-
-					<input type="text"  class="form-control" name="domicilio_A" placeholder="Domicilio" required autofocus>
-
-					<input type="text" class="form-control" name="escAnterior" placeholder="Escuela anterior" required><br>
-
-					<button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Ingresar</button>
-				</section>
-			</article>
-			<article class="column2">
-				<section> 
-					<div class="adjuntados">
-						Adjuntar DNI<br>
-						<input type="file" name="ImagDNI_A" accept="image/*" required>
-					</div>
-
-					<div class="adjuntados">
-						Adjuntar Constancia<br>
-						<input type="file" name="constancia" accept="image/*" required>
-					</div>
-				</section>
-			</article>
-			</center>
-        </form>
-	</form>
-
+					<input type="text"  class="form-control" name="domicilio_A" placeholder="Domicilio" required autofocus disabled>
+					
+					<input type="text" class="form-control" name="escAnterior" placeholder="Escuela anterior" required disabled>
+					
+					<button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">volver</button>
+		</center>
+	</article>
 
 	<?php
 	session_start();
@@ -78,7 +65,7 @@
 			$resultado1= mysqli_query($conexion, $consulta);
 			$resultadot = mysqli_fetch_assoc($resultado1);
 			$id_tutor=$resultadot['ID'];
-
+			
 			$consulta="INSERT INTO `tienechicos` (`id_tutor`, `id_chicos`) VALUES ('$id_tutor', '$id_alumno');";
 			$resultado= mysqli_query($conexion, $consulta);
 
@@ -88,7 +75,7 @@
 			die();
 		}
 
-
+	
 		include 'footer.html';
 	?>
 </body>
