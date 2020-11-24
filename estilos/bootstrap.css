@@ -59,10 +59,10 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  text-align: left;
+  text-align: center;
   background-color: #d2d9df;
   margin-bottom: 75px;
-  width: 90%;
+  width: 100%;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -641,6 +641,7 @@ pre code {
   padding-left: 0;
 }
 
+/*PADDING HORIZONTAL*/
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
@@ -4836,11 +4837,12 @@ input[type="button"].btn-block {
   border-top: 0;
 }
 
+/*PADDING VERTICAL*/
 .card-body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  padding: 1rem;
 }
 
 .card-title {

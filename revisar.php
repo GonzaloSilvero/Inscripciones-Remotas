@@ -6,8 +6,8 @@
 </head>
 <body>		
 
-	<form class="form-signin" action="tutor.php" method="POST">
-            <center>
+			<div class="form-signin">
+			<center>
             <h1 class="h1 mb-3 font-weight-normal">Registro</h1>
 			<input type="text" id="inputNombre" class="form-control" name="nombre_T" placeholder="Nombre" required autofocus disabled >
 			
@@ -22,8 +22,8 @@
 			<input type="text" id="inputContraseña" class="form-control" name="contrasena_T" minlength="8" maxlength="8" placeholder="Dni Alumno" required disabled>
 			
             <button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Volver</button>
-            </center>
-        </form>
+			</center>
+			</div>
 	<?php
 
 	$conexion =mysqli_connect("localhost", "root", "","sorteo");
