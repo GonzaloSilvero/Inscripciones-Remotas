@@ -40,7 +40,7 @@
 
 			<input type="tel" id="inputTel" class="form-control" maxlength="10" placeholder="Telefono" value="<?php echo "Edad: ".$datosAlumno['Edad']; ?>" disabled>
 			
-			<input type="email" id="inputEmail" class="form-control" placeholder="Email" value="<?php echo "DNI: ".$datosAlumno['dni']; ?>" disabled>
+			<input type="num" id="inputEmail" class="form-control" placeholder="Email" value="<?php echo "DNI: ".$datosAlumno['dni']; ?>" disabled>
 
 			<input type="text" id="inputUsuario" class="form-control" minlength="8" maxlength="8" placeholder="Dni Tutor" value="<?php echo "Domicilio: ".$datosAlumno['Domicilio']; ?>" disabled>
 			

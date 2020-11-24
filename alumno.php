@@ -19,7 +19,7 @@
 
 					<input type="text" class="form-control" name="edad_A" maxlength="2" placeholder="Edad" required autofocus>
 
-					<input type="text" class="form-control" name="dni_A" maxlength="3" placeholder="Ultimos 3 digitos del DNI" required>
+					<input type="text" class="form-control" name="dni_A" maxlength="8" placeholder="DNI" required>
 
 					<input type="text"  class="form-control" name="domicilio_A" placeholder="Domicilio" required autofocus>
 

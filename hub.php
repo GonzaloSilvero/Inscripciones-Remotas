@@ -42,7 +42,8 @@
 						echo"<div class='d-flex justify-content-between align-items-center'>";
 					echo"<div class='btn-group'>";
 					
-					echo"<a href='datosAlumno.php' class='btn btn-secondary'>"."Revisar"."</a>";
+					$_SESSION['id_alumno']=$seleccionado['ID'];
+					echo"<a href='revisar.php' class='btn btn-secondary'>"."Revisar"."</a>";
 					echo"</div>";
 				echo"</div>";
 				echo"</div>";
