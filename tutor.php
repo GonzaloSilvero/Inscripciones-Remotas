@@ -5,8 +5,8 @@
 <title>Registro</title>
 </head>
 <body>		
-
-	<form class="form-signin" action="tutor.php" method="POST">
+<?php include 'nav.html';?>
+	<form class="form-signin mt-5" action="tutor.php" method="POST">
             <center>
             <h1 class="h1 mb-3 font-weight-normal">Registro</h1>
             <label for="inputNombre" class="sr-only">Nombre</label>

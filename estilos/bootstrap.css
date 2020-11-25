@@ -4500,6 +4500,19 @@ input[type="button"].btn-block {
   background-size: 100% 100%;
 }
 
+@media (max-width: 376px) {
+  .navbar-expand {
+    height: 14vw;
+  }
+  }
+
+@media (min-width: 376px) {
+.navbar-expand {
+  height: 10vw;
+}
+}
+
+
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid, .navbar-expand-sm > .container-sm, .navbar-expand-sm > .container-md, .navbar-expand-sm > .container-lg, .navbar-expand-sm > .container-xl {
@@ -4509,6 +4522,10 @@ input[type="button"].btn-block {
 }
 
 @media (min-width: 576px) {
+  .navbar-expand {
+    height: 6vw;
+  }
+
   .navbar-expand-sm {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
@@ -4551,6 +4568,9 @@ input[type="button"].btn-block {
 }
 
 @media (min-width: 768px) {
+  .navbar-expand {
+    height: 5vw;
+  }
   .navbar-expand-md {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
@@ -4593,6 +4613,10 @@ input[type="button"].btn-block {
 }
 
 @media (min-width: 992px) {
+  .navbar-expand {
+    height: 3.5vw;
+  }
+
   .navbar-expand-lg {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
@@ -4635,6 +4659,10 @@ input[type="button"].btn-block {
 }
 
 @media (min-width: 1200px) {
+  .navbar-expand {
+    height: 2.4vw;
+  }
+
   .navbar-expand-xl {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
