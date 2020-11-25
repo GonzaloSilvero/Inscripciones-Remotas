@@ -39,7 +39,9 @@
 
 			<input type="tel" id="inputTel" class="form-control" maxlength="10" placeholder="Telefono" value="<?php echo "Edad: ".$datosAlumno['Edad']; ?>" disabled>
 			
-			<input type="num" id="inputEmail" class="form-control" placeholder="Email" value="<?php echo "DNI: ".$datosAlumno['dni']; ?>" disabled>
+            <input type="num" id="inputDNI" class="form-control" placeholder="DNI" value="<?php echo "DNI: ".$datosAlumno['dni']; ?>" disabled>
+            
+            <input type="num" id="inputAño" class="form-control" placeholder="Año a Ingresar" value="<?php echo "Año a Ingresar: ".$datosAlumno['año_a_ingresar']. "°"; ?>" disabled>
 
 			<input type="text" id="inputUsuario" class="form-control" minlength="8" maxlength="8" placeholder="Dni Tutor" value="<?php echo "Domicilio: ".$datosAlumno['Domicilio']; ?>" disabled>
 			

@@ -19,6 +19,8 @@
 
 					<input type="text" class="form-control" name="dni_A" maxlength="8" placeholder="DNI" required>
 
+					<input type="text" class="form-control" name="ano_A" maxlength="1" placeholder="Año a Ingresar" required>
+
 					<input type="text"  class="form-control" name="domicilio_A" placeholder="Domicilio" required autofocus>
 
 					<input type="text" class="form-control" name="escAnterior" placeholder="Escuela anterior" required><br>
@@ -58,6 +60,7 @@
 			$apellido_A= $_POST['apellido_A'];
 			$edad_A= $_POST['edad_A'];
 			$dni_A= $_POST['dni_A'];
+			$ano_A= $_POST['ano_A'];
 			$domicilio_A= $_POST['domicilio_A'];
 			$escuelaAnt= $_POST['escAnterior'];
 			$imagenDNI= $_POST['ImagDNI_A'];
@@ -65,7 +68,7 @@
 
 			//$contrasena_T_codificada=password_hash($contrasena_T, PASSWORD_DEFAULT);
 
-			$consulta="INSERT INTO `chicos_i` (`Nombre`, `Apellido`, `Edad`, `Domicilio`, `Escuela_A`, `dni`, `fotocopia`, `constancia`) VALUES ('$nombre_A', '$apellido_A', '$edad_A', '$domicilio_A', '$escuelaAnt', '$dni_A', '$imagenDNI', '$constancia');";
+			$consulta="INSERT INTO `chicos_i` (`Nombre`, `Apellido`, `Edad`, `Domicilio`, `Escuela_A`, `dni`, `fotocopia`, `constancia`, `año_a_ingresar`) VALUES ('$nombre_A', '$apellido_A', '$edad_A', '$domicilio_A', '$escuelaAnt', '$dni_A', '$imagenDNI', '$constancia', '$ano_A');";
 			$resultado= mysqli_query($conexion, $consulta);
 			
 			$id_alumno= $conexion->insert_id;
