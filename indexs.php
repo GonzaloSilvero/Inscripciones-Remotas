@@ -5,8 +5,9 @@
 <link href="estilos/signin.css" rel="stylesheet">
 <title>Formulario de Inscripcion</title>
 </head>
+<?php include 'nav.html';?>
     <body class="text-center">
-        <form class="form-signin" action="index.php" method="POST">
+        <form class="form-signin mt-6" action="index.php" method="POST">
             <h1 class="h1">Formulario de inscripcion</h1>
             <center>
             <label for="inputTutor" class="sr-only">Usuario<br></label>

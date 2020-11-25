@@ -281,13 +281,33 @@ button,
 
 /*este tiene las caracteristicas del boton*/
 
+@media (max-width:376px){
+  button:not(:disabled),
+  [type="button"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  [type="submit"]:not(:disabled) {
+    cursor: pointer;
+    width: 60vw;
+  }
+}
+
+@media (min-width:376px){
+  button:not(:disabled),
+  [type="button"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  [type="submit"]:not(:disabled) {
+    cursor: pointer;
+    width: 40vw;
+  }
+}
+
 @media (min-width:576px){
   button:not(:disabled),
   [type="button"]:not(:disabled),
   [type="reset"]:not(:disabled),
   [type="submit"]:not(:disabled) {
     cursor: pointer;
-    width: 1vw;
+    width: 25vw;
   }
 }
 
@@ -297,26 +317,17 @@ button,
   [type="reset"]:not(:disabled),
   [type="submit"]:not(:disabled) {
     cursor: pointer;
-    width: 1vw;
-  }
-}
-@media (min-width:892px){
-  button:not(:disabled),
-  [type="button"]:not(:disabled),
-  [type="reset"]:not(:disabled),
-  [type="submit"]:not(:disabled) {
-    cursor: pointer;
-    width:15vw;
+    width: 20vw;
   }
 }
 
-@media (max-width:992px){
+@media (min-width:992px){
   button:not(:disabled),
   [type="button"]:not(:disabled),
   [type="reset"]:not(:disabled),
   [type="submit"]:not(:disabled) {
     cursor: pointer;
-    width:60vw;
+    width:14.5vw;
   }
 }
 
@@ -8351,6 +8362,10 @@ button.bg-dark:focus {
 .ml-5,
 .mx-5 {
   margin-left: 3rem !important;
+}
+
+.mt-6 {
+  margin-top: 7rem !important;
 }
 
 .p-0 {

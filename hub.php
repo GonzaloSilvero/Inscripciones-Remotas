@@ -14,6 +14,7 @@
 <body>
 	<h1>Alumnos Registrados</h1>
 	<main>
+	<div class="container">
 	<?php
 
 	$conexion =mysqli_connect("localhost", "root", "","sorteo");
@@ -56,7 +57,8 @@
 	
 	?>
 	<a href="alumno.php"><button  class="btn btn-lg btn-dark btn-block " type="submit" href="alumno.php">Añadir alumno<br></button></a>
-	<?php //include 'footer.html';?> 
+	<?php include 'footer.html';?> 
+	</div>
 </main>
 
 
