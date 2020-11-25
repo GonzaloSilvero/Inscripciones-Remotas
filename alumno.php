@@ -66,7 +66,23 @@
 			$imagenDNI= $_POST['ImagDNI_A'];
 			$constancia= $_POST['constancia'];
 
-			//$contrasena_T_codificada=password_hash($contrasena_T, PASSWORD_DEFAULT);
+			$busquedaDni="SELECT * FROM `chicos_i`";
+			$resultadoDni= mysqli_query($conexion, $busquedaDni);
+
+
+			while($resultadot = mysqli_fetch_assoc($resultadoDni)){
+				$hope=$resultadot['dni'];
+				if ($hope==$dni_A) 
+				{
+					$alerta = "este DNI ya fue infresado";
+					echo "<script> alert('".$alerta."'); </script>";
+
+					header("Location: pagina.php");
+					
+				}
+				echo $resultadot["dni"];
+			}
+
 
 			$consulta="INSERT INTO `chicos_i` (`Nombre`, `Apellido`, `Edad`, `Domicilio`, `Escuela_A`, `dni`, `fotocopia`, `constancia`, `año_a_ingresar`) VALUES ('$nombre_A', '$apellido_A', '$edad_A', '$domicilio_A', '$escuelaAnt', '$dni_A', '$imagenDNI', '$constancia', '$ano_A');";
 			$resultado= mysqli_query($conexion, $consulta);
@@ -82,10 +98,12 @@
 
 			$consulta="INSERT INTO `tienechicos` (`id_tutor`, `id_chicos`) VALUES ('$id_tutor', '$id_alumno');";
 			$resultado= mysqli_query($conexion, $consulta);
+			
 
 			mysqli_close($conexion);
 
 			header("Location: hub.php");
+		
 			die();
 		}
 

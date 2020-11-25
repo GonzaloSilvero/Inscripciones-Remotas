@@ -43,7 +43,7 @@
 					echo"<div class='btn-group'>";
 					
 					$envio=$seleccionado['ID'];
-					echo"<a href='revisar.php?id=".$envio."' class='btn btn-secondary'>"."Revisar"."</a>";
+					echo"<a href='revisar.php?id=".$envio." ' class='btn btn-secondary'>"."Revisar"."</a>";
 					echo"</div>";
 				echo"</div>";
 				echo"</div>";

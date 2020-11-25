@@ -10,9 +10,6 @@
 	if (!isset($_SESSION["usuario"])) {
         header("location:index.php");
     }
-    else if (!isset($_SESSION['id_alumno'])) {
-        header("location:hub.php");
-    }
 
     $conexion =mysqli_connect("localhost", "root", "","sorteo");
 
