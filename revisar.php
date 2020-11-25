@@ -5,7 +5,7 @@
 <title>Revisar Ingresante</title>
 </head>
 <body>		
-<?php include 'head.html';?>
+<?php include 'nav.html';?>
 <?php
 	session_start();
 	if (!isset($_SESSION["usuario"])) {
