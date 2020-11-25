@@ -53,8 +53,10 @@
 							<th>Apellido</th>
                             <th>Edad</th>
 							<th>Dni</th>
+							<th>Año a ingresar</th>
 							<th>Domicilio</th>
 							<th>Escuela Anterior</th>
+							
 							<th>Modificar</th>
 						</tr>
 					</thead>
@@ -67,6 +69,7 @@
 								<td><?php echo $row['Apellido']; ?></td>
 								<td><?php echo $row['Edad']; ?></td>
 								<td><?php echo $row['dni']; ?></td>
+								<td><?php echo $row['año_a_ingresar']; ?></td>
 							
 								<td><?php echo $row['Domicilio'] ?> </td>
 								<td><?php echo $row['Escuela_A']; ?></td>	
