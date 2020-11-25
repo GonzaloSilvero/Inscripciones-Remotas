@@ -2,10 +2,10 @@
 <html>
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="../estilos/bootstrap.css" rel="stylesheet">
-	<link rel="icon" href="../iconos/isotipo.png">
+	<link href="estilos/bootstrap.css" rel="stylesheet">
+	<link rel="icon" href="iconos/isotipo.png">
 	<title>Inscripciones Remotas</title>
-<link href="../estilos/signin.css" rel="stylesheet">
+<link href="estilos/signin.css" rel="stylesheet">
 <script src="https://kit.fontawesome.com/82ccab91a3.js" crossorigin="anonymous"></script>
 </head>
 <body>		

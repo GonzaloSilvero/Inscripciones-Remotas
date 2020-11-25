@@ -12,9 +12,9 @@
 <html lang="es">
 	<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="../estilos/bootstrap.css" rel="stylesheet">		 
-		<script src="../js/jquery.js"></script>
-		<script src="../js/bootstrap.js"></script>
+		<link href="estilos/bootstrap.css" rel="stylesheet">		 
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
 		<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
 
 <script type="text/javascript" src="DataTables/datatables.min.js"></script>

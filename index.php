@@ -55,7 +55,7 @@
                     if ($contrasena == 00000000) {
                         session_start();
                         $_SESSION['admin']= "admin";
-                        header("Location: panelAdmin/panel.php");
+                        header("Location:panel.php");
                         die();
                     }
                 }
