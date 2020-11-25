@@ -50,12 +50,12 @@
                     }
                     else
                     {
-                        echo "contraseña erronea";
+                        echo '<script type="text/javascript">alert("contraseña erronea");</script>';
                     }
                 }
                 else 
                 {
-                        echo "usuario invalido";
+                    echo '<script type="text/javascript">alert("usuario invalido");</script>';
                 }
                 mysqli_close($conexion);
             }

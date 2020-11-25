@@ -5,25 +5,42 @@
 	<link href="estilos/alumno.css" rel="stylesheet">
 </head>
 <body>
-
+<?php
+$nombre="";
+$apellido="";
+$edad="";
+$año="";
+$domicilio="";
+$escuela="";
+if(isset($_REQUEST["existe"])){
+	$nombre=$_REQUEST["nombre"];
+	$apellido=$_REQUEST["apellido"];
+	$edad=$_REQUEST["edad"];
+	$año=$_REQUEST["año"];
+	$domicilio=$_REQUEST["domicilio"];
+	$escuela=$_REQUEST["escuela"];
+	
+	echo '<script type="text/javascript">alert("Ya existe ese DNI, Por favor inserte otro");</script>';
+}
+?>
         <form class="form-signin" action="alumno.php" method="POST">
             <center>
 			<h1 class="h1 mb-3 font-weight-normal">Ingresante</h1>
 			<article class="column1">
 				<section >
-					<input type="text" class="form-control" name="nombre_A" placeholder="Nombre" required autofocus>
+					<input type="text" class="form-control" name="nombre_A" placeholder="Nombre" value="<?php echo $nombre?>" required autofocus>
 
-					<input type="text" class="form-control" name="apellido_A" placeholder="Apellido" required>
+					<input type="text" class="form-control" name="apellido_A" placeholder="Apellido" value="<?php echo $apellido?>" required>
 
-					<input type="text" class="form-control" name="edad_A" maxlength="2" placeholder="Edad" required autofocus>
+					<input type="text" class="form-control" name="edad_A" maxlength="2" placeholder="Edad" value="<?php echo $edad?>" required autofocus>
 
 					<input type="text" class="form-control" name="dni_A" maxlength="8" placeholder="DNI" required>
 
-					<input type="text" class="form-control" name="ano_A" maxlength="1" placeholder="Año a Ingresar" required>
+					<input type="text" class="form-control" name="ano_A" maxlength="1" placeholder="Año a Ingresar" value="<?php echo $año?>" required>
 
-					<input type="text"  class="form-control" name="domicilio_A" placeholder="Domicilio" required autofocus>
+					<input type="text"  class="form-control" name="domicilio_A" placeholder="Domicilio" value="<?php echo $domicilio?>" required autofocus>
 
-					<input type="text" class="form-control" name="escAnterior" placeholder="Escuela anterior" required><br>
+					<input type="text" class="form-control" name="escAnterior" placeholder="Escuela anterior" value="<?php echo $escuela?>" required><br>
 
 					<button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Ingresar</button>
 				</section>
@@ -66,48 +83,39 @@
 			$imagenDNI= $_POST['ImagDNI_A'];
 			$constancia= $_POST['constancia'];
 
-			$busquedaDni="SELECT * FROM `chicos_i`";
-			$resultadoDni= mysqli_query($conexion, $busquedaDni);
+			$busquedaDni="SELECT * FROM chicos_i WHERE dni ='$dni_A'";
 
-
-			while($resultadot = mysqli_fetch_assoc($resultadoDni)){
-				$hope=$resultadot['dni'];
-				if ($hope==$dni_A) 
-				{
-					$alerta = "este DNI ya fue infresado";
-					echo "<script> alert('".$alerta."'); </script>";
-
-					header("Location: pagina.php");
-					
+			if ($resultadoDni = $conexion->query($busquedaDni)) {
+				if($resultadoDni->num_rows>0){
+					header("Location:alumno.php?existe=si&nombre=$nombre_A&apellido=$apellido_A&edad=$edad_A&año=$ano_A&domicilio=$domicilio_A&escuela=$escuelaAnt");
 				}
-				echo $resultadot["dni"];
-			}
+				else
+				{
+					$consulta="INSERT INTO `chicos_i` (`Nombre`, `Apellido`, `Edad`, `Domicilio`, `Escuela_A`, `dni`, `fotocopia`, `constancia`, `año_a_ingresar`) VALUES ('$nombre_A', '$apellido_A', '$edad_A', '$domicilio_A', '$escuelaAnt', '$dni_A', '$imagenDNI', '$constancia', '$ano_A');";
+					$resultado= mysqli_query($conexion, $consulta);
+					
+					$id_alumno= $conexion->insert_id;
 
+					$sesion=$_SESSION['usuario'];
 
-			$consulta="INSERT INTO `chicos_i` (`Nombre`, `Apellido`, `Edad`, `Domicilio`, `Escuela_A`, `dni`, `fotocopia`, `constancia`, `año_a_ingresar`) VALUES ('$nombre_A', '$apellido_A', '$edad_A', '$domicilio_A', '$escuelaAnt', '$dni_A', '$imagenDNI', '$constancia', '$ano_A');";
-			$resultado= mysqli_query($conexion, $consulta);
-			
-			$id_alumno= $conexion->insert_id;
+					$consulta="SELECT * FROM `tutor` WHERE `Usuario` = $sesion";
+					$resultado1= mysqli_query($conexion, $consulta);
+					$resultadot = mysqli_fetch_assoc($resultado1);
+					$id_tutor=$resultadot['ID'];
 
-			$sesion=$_SESSION['usuario'];
+					$consulta="INSERT INTO `tienechicos` (`id_tutor`, `id_chicos`) VALUES ('$id_tutor', '$id_alumno');";
+					$resultado= mysqli_query($conexion, $consulta);
+					
 
-			$consulta="SELECT * FROM `tutor` WHERE `Usuario` = $sesion";
-			$resultado1= mysqli_query($conexion, $consulta);
-			$resultadot = mysqli_fetch_assoc($resultado1);
-			$id_tutor=$resultadot['ID'];
+					mysqli_close($conexion);
 
-			$consulta="INSERT INTO `tienechicos` (`id_tutor`, `id_chicos`) VALUES ('$id_tutor', '$id_alumno');";
-			$resultado= mysqli_query($conexion, $consulta);
-			
-
+					header("Location: hub.php");
+				
+					die();
+				}
+			}	
 			mysqli_close($conexion);
-
-			header("Location: hub.php");
-		
-			die();
 		}
-
-
 		include 'footer.html';
 	?>
 </body>
