@@ -5,6 +5,7 @@
 	<link href="estilos/alumno.css" rel="stylesheet">
 </head>
 <body>
+<?php include 'nav.html';?>
 <?php
 $nombre="";
 $apellido="";

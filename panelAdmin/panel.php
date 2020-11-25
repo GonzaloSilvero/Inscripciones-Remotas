@@ -12,11 +12,11 @@
 <html lang="es">
 	<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="../estilos/dist/css/bootstrap.css" rel="stylesheet">		 
+		<link href="../estilos/bootstrap.css" rel="stylesheet">		 
 		<script src="../js/jquery.js"></script>
 		<script src="../js/bootstrap.js"></script>
 		<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
- 
+
 <script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
 <script>
@@ -30,7 +30,7 @@
 				"infoFiltered": "(filtrada de _MAX_ registros)",
 				"loadingRecords": "Cargando...",
 				"processing":     "Procesando...",
-				"search": "Buscar Por apellido:",
+				"search": "Buscar:",
 				"zeroRecords":    "No se encontraron registros coincidentes",
 				"paginate": {
 					"next":       "Siguiente",
@@ -41,10 +41,27 @@
 	});	
 </script>
 	</head>
-	
-	<body style="background-color: #CED6F4">
-		<div class="container">
-			
+	<body style="background-color: #d2d9df">
+	<header>
+<nav class="navbar navbar-expand navbar-dark bg-dark" >
+    <a class="navbar-brand" href="#"><i class="fas fa-door-open"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+        </li>
+        <li class="nav-item">
+        </li>
+        </ul>
+        <form class="form-inline my-2 my-md-0">
+            <input class="form-control" type="text" placeholder="Search">
+        </form>
+    </div>
+</nav>
+</header>
 			<div class="row table-responsive">
 				<table class="display" id="mitabla">
 					<thead>
@@ -80,7 +97,7 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
+
 		
 	<?php mysqli_close($conexion) ?>
 	</body>

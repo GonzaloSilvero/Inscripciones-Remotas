@@ -4,7 +4,7 @@
 <link href="estilos/signin.css" rel="stylesheet">
 </head>
 <body>		
-
+<?php include 'head.html';?>
 <?php
 	session_start();
 	if (!isset($_SESSION["usuario"])) {

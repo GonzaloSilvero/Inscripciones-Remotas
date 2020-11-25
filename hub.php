@@ -3,7 +3,6 @@
 <head>
 <?php include 'head.html';?>
 <link href="estilos/album.css" rel="stylesheet">
-<title>Alumnos Registrados</title>
 </head>
 	<?php
 		session_start();
@@ -12,6 +11,7 @@
 		}
 	?>
 <body>
+<?php include 'nav.html';?>
 	<h1>Alumnos Registrados</h1>
 	<main>
 	<div class="container">
@@ -44,8 +44,8 @@
 						echo"<div class='d-flex justify-content-between align-items-center'>";
 					echo"<div class='btn-group'>";
 					
-					$_SESSION['id_alumno']=$seleccionado['ID'];
-					echo"<a href='revisar.php' class='btn btn-secondary'>"."Revisar"."</a>";
+					$envio=$seleccionado['ID'];
+					echo"<a href='revisar.php?id=".$envio." ' class='btn btn-secondary'>"."Revisar"."</a>";
 					echo"</div>";
 				echo"</div>";
 				echo"</div>";

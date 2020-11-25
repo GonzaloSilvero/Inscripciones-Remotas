@@ -4,7 +4,25 @@
 <?php include 'head.html';?>
 <link href="estilos/signin.css" rel="stylesheet">
 </head>
-<?php include 'nav.html';?>
+
+<header>
+<nav class="navbar navbar-expand navbar-dark bg-dark" >
+    <a class="navbar-brand" href="https://www.instagram.com/tecnicacatorce/"><i class="fab fa-instagram"></i></a>
+    <a class="navbar-brand" href="https://www.facebook.com/profile.php?id=100006789528190"><i class="fab fa-facebook"></i></a>
+    <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+        </li>
+        <li class="nav-item">
+        </li>
+        </ul>
+    </div>
+    <a class="navbar-brand" href="cerrar_sesion.php"><i class="fas fa-door-open"></i></a>
+</nav>
+</header>
+
+
+
     <body class="text-center">
         <form class="form-signin mt-5" action="index.php" method="POST">
             <h1 class="h1">Formulario de inscripcion</h1>
