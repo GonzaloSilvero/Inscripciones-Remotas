@@ -18,6 +18,7 @@
 		<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
 
 <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+<script src="https://kit.fontawesome.com/82ccab91a3.js" crossorigin="anonymous"></script>
 
 <script>
 	$(document).ready(function(){
@@ -44,11 +45,8 @@
 	<body style="background-color: #d2d9df">
 	<header>
 <nav class="navbar navbar-expand navbar-dark bg-dark" >
-    <a class="navbar-brand" href="#"><i class="fas fa-door-open"></i></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
+    <a class="navbar-brand" href="https://www.instagram.com/tecnicacatorce/"><i class="fab fa-instagram"></i></a>
+    <a class="navbar-brand" href="https://www.facebook.com/profile.php?id=100006789528190"><i class="fab fa-facebook"></i></a>
     <div class="collapse navbar-collapse" id="navbarsExample02">
         <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -56,11 +54,11 @@
         <li class="nav-item">
         </li>
         </ul>
-        <form class="form-inline my-2 my-md-0">
-            <input class="form-control" type="text" placeholder="Search">
-        </form>
     </div>
+    <a class="navbar-brand" href="cerrar_sesion.php"><i class="fas fa-door-open"></i></a>
 </nav>
+</header>
+
 </header>
 			<div class="row table-responsive">
 				<table class="display" id="mitabla">

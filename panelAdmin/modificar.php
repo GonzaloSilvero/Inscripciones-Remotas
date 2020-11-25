@@ -6,16 +6,14 @@
 	<link rel="icon" href="../iconos/isotipo.png">
 	<title>Inscripciones Remotas</title>
 <link href="../estilos/signin.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/82ccab91a3.js" crossorigin="anonymous"></script>
 </head>
 <body>		
 
 <header>
 <nav class="navbar navbar-expand navbar-dark bg-dark" >
-    <a class="navbar-brand" href="#"><i class="fas fa-door-open"></i></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
+    <a class="navbar-brand" href="https://www.instagram.com/tecnicacatorce/"><i class="fab fa-instagram"></i></a>
+    <a class="navbar-brand" href="https://www.facebook.com/profile.php?id=100006789528190"><i class="fab fa-facebook"></i></a>
     <div class="collapse navbar-collapse" id="navbarsExample02">
         <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -23,11 +21,11 @@
         <li class="nav-item">
         </li>
         </ul>
-        <form class="form-inline my-2 my-md-0">
-            <input class="form-control" type="text" placeholder="Search">
-        </form>
     </div>
+    <a class="navbar-brand" href="cerrar_sesion.php"><i class="fas fa-door-open"></i></a>
 </nav>
+</header>
+
 
 <?php
 	session_start();
@@ -67,11 +65,11 @@
 			<input type="text" id="inputUsuario" name="domicilio_A"  class="form-control" minlength="8" maxlength="8" placeholder="Dni Tutor" value="<?php echo $datosAlumno['Domicilio']; ?>">
             
             Escuela_A:
-            <input type="text" id="inputContraseña" name="escAnterior"  class="form-control" minlength="8" maxlength="8" placeholder="Dni Alumno" value="<?php echo $datosAlumno['Escuela_A']; ?>">
+            <input type="text" id="inputContraseña" name="escAnterior"  class="form-control" minlength="8" maxlength="8" placeholder="Dni Alumno" value="<?php echo $datosAlumno['Escuela_A']; ?>"><br>
             
-            <input type="hidden" id="id" name="id" value="<?php echo $referenciaAlumno; ?>" />
+            <input type="hidden" id="id" name="id" value="<?php echo $referenciaAlumno; ?>"/>
 			
-			<button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Modificar</button>
+			<button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Modificar</button><br>
             </center>
 </form>  
 

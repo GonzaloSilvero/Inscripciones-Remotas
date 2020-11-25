@@ -17,7 +17,6 @@
         </li>
         </ul>
     </div>
-    <a class="navbar-brand" href="cerrar_sesion.php"><i class="fas fa-door-open"></i></a>
 </nav>
 </header>
 
