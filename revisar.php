@@ -2,7 +2,6 @@
 <html>
 <?php include 'head.html';?>
 <link href="estilos/signin.css" rel="stylesheet">
-<title>Registro</title>
 </head>
 <body>		
 
@@ -11,13 +10,10 @@
 	if (!isset($_SESSION["usuario"])) {
         header("location:index.php");
     }
-    else if (!isset($_SESSION['id_alumno'])) {
-        header("location:hub.php");
-    }
 
     $conexion =mysqli_connect("localhost", "root", "","sorteo");
 
-    $referenciaAlumno = $_SESSION['id_alumno'];
+    $referenciaAlumno = $_REQUEST['id'];
 
 	$resultado_alumno= mysqli_query($conexion, "SELECT * FROM `chicos_i` WHERE `ID` = '$referenciaAlumno' ");
     $datosAlumno= mysqli_fetch_assoc($resultado_alumno);
@@ -40,7 +36,9 @@
 
 			<input type="tel" id="inputTel" class="form-control" maxlength="10" placeholder="Telefono" value="<?php echo "Edad: ".$datosAlumno['Edad']; ?>" disabled>
 			
-			<input type="num" id="inputEmail" class="form-control" placeholder="Email" value="<?php echo "DNI: ".$datosAlumno['dni']; ?>" disabled>
+            <input type="num" id="inputDNI" class="form-control" placeholder="DNI" value="<?php echo "DNI: ".$datosAlumno['dni']; ?>" disabled>
+            
+            <input type="num" id="inputAño" class="form-control" placeholder="Año a Ingresar" value="<?php echo "Año a Ingresar: ".$datosAlumno['año_a_ingresar']. "°"; ?>" disabled>
 
 			<input type="text" id="inputUsuario" class="form-control" minlength="8" maxlength="8" placeholder="Dni Tutor" value="<?php echo "Domicilio: ".$datosAlumno['Domicilio']; ?>" disabled>
 			

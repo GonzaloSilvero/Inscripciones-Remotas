@@ -3,7 +3,6 @@
 <head>
 <?php include 'head.html';?>
 <link href="estilos/signin.css" rel="stylesheet">
-<title>Formulario de Inscripcion</title>
 </head>
 <?php include 'nav.html';?>
     <body class="text-center">
@@ -38,7 +37,7 @@
                 if ($usuario == 00000000) {
                     if ($contrasena == 00000000) {
                         session_start();
-                        $_SESSION['usuario']= "admin";
+                        $_SESSION['admin']= "admin";
                         header("Location: panelAdmin/panel.php");
                         die();
                     }
@@ -52,12 +51,12 @@
                     }
                     else
                     {
-                        echo "contraseña erronea";
+                        echo '<script type="text/javascript">alert("contraseña erronea");</script>';
                     }
                 }
                 else 
                 {
-                        echo "usuario invalido";
+                    echo '<script type="text/javascript">alert("usuario invalido");</script>';
                 }
                 mysqli_close($conexion);
             }
