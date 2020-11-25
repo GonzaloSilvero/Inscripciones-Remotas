@@ -2,6 +2,7 @@
 <html>
 <?php include 'head.html';?>
 <link href="estilos/signin.css" rel="stylesheet">
+<title>Revisar Ingresante</title>
 </head>
 <body>		
 <?php include 'head.html';?>

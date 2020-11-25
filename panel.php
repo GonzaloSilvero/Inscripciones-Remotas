@@ -43,9 +43,9 @@
 </script>
 	</head>
 	<body style="background-color: #d2d9df">
-	<?php include 'head.html';?>
+	<?php include 'nav.html';?>
 
-</header>
+
 			<div class="row table-responsive">
 				<table class="display" id="mitabla">
 					<thead>

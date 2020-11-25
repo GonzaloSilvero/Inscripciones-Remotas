@@ -3,6 +3,7 @@
 <head>
 <?php include 'head.html';?>
 <link href="estilos/album.css" rel="stylesheet">
+<title>Usuario</title>
 </head>
 	<?php
 		session_start();

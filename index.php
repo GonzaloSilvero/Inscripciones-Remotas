@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Login</title>
 <?php include 'head.html';?>
 <link href="estilos/signin.css" rel="stylesheet">
 </head>
 
+
+    <body class="text-center">
+        
 <header>
 <nav class="navbar navbar-expand navbar-dark bg-dark" >
     <a class="navbar-brand" href="https://www.instagram.com/tecnicacatorce/"><i class="fab fa-instagram"></i></a>
@@ -20,9 +24,6 @@
 </nav>
 </header>
 
-
-
-    <body class="text-center">
         <form class="form-signin mt-5" action="index.php" method="POST">
             <h1 class="h1">Formulario de inscripcion</h1>
             <center>

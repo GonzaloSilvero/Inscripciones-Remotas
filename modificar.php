@@ -10,7 +10,7 @@
 </head>
 <body>		
 
-<?php include 'head.html';?>
+<?php include 'nav.html';?>
 
 <?php
 	session_start();

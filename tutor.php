@@ -2,6 +2,7 @@
 <html>
 <?php include 'head.html';?>
 <link href="estilos/signin.css" rel="stylesheet">
+<title>Registro Tutor</title>
 </head>
 <body>		
 
