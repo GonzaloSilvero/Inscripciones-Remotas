@@ -3,6 +3,7 @@
 <head>
 <?php include 'head.html';?>
 <link href="estilos/album.css" rel="stylesheet">
+<title>Usuario</title>
 </head>
 	<?php
 		session_start();
@@ -11,8 +12,10 @@
 		}
 	?>
 <body>
+<?php include 'nav.html';?>
 	<h1>Alumnos Registrados</h1>
 	<main>
+	<div class="container">
 	<?php
 
 	$conexion =mysqli_connect("localhost", "root", "","sorteo");
@@ -56,6 +59,7 @@
 	?>
 	<a href="alumno.php"><button  class="btn btn-lg btn-dark btn-block " type="submit" href="alumno.php">Añadir alumno<br></button></a>
 	<?php include 'footer.html';?> 
+	</div>
 </main>
 
 

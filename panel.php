@@ -12,12 +12,13 @@
 <html lang="es">
 	<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="../estilos/dist/css/bootstrap.css" rel="stylesheet">		 
-		<script src="../js/jquery.js"></script>
-		<script src="../js/bootstrap.js"></script>
+		<link href="estilos/bootstrap.css" rel="stylesheet">		 
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
 		<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
- 
+
 <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+<script src="https://kit.fontawesome.com/82ccab91a3.js" crossorigin="anonymous"></script>
 
 <script>
 	$(document).ready(function(){
@@ -30,7 +31,7 @@
 				"infoFiltered": "(filtrada de _MAX_ registros)",
 				"loadingRecords": "Cargando...",
 				"processing":     "Procesando...",
-				"search": "Buscar Por apellido:",
+				"search": "Buscar:",
 				"zeroRecords":    "No se encontraron registros coincidentes",
 				"paginate": {
 					"next":       "Siguiente",
@@ -41,10 +42,10 @@
 	});	
 </script>
 	</head>
-	
-	<body style="background-color: #CED6F4">
-		<div class="container">
-			
+	<body style="background-color: #d2d9df">
+	<?php include 'nav.html';?>
+
+
 			<div class="row table-responsive">
 				<table class="display" id="mitabla">
 					<thead>
@@ -83,7 +84,7 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
+
 		
 	<?php mysqli_close($conexion) ?>
 	</body>

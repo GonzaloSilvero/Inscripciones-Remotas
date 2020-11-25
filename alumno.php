@@ -3,8 +3,10 @@
 	<?php include 'head.html';?>
 	<link href="estilos/signin.css" rel="stylesheet">
 	<link href="estilos/alumno.css" rel="stylesheet">
+	<title>Registrar Ingresante</title>
 </head>
 <body>
+<?php include 'nav.html';?>
 <?php
 $nombre="";
 $apellido="";

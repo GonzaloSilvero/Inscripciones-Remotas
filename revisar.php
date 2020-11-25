@@ -2,9 +2,10 @@
 <html>
 <?php include 'head.html';?>
 <link href="estilos/signin.css" rel="stylesheet">
+<title>Revisar Ingresante</title>
 </head>
 <body>		
-
+<?php include 'nav.html';?>
 <?php
 	session_start();
 	if (!isset($_SESSION["usuario"])) {
@@ -48,7 +49,7 @@
             </center>
         </div>
 	<?php
-	 mysqli_close($conexion);
+	mysqli_close($conexion);
 		include 'footer.html';
 	?>
 

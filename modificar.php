@@ -2,12 +2,15 @@
 <html>
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="../estilos/bootstrap.css" rel="stylesheet">
-	<link rel="icon" href="../iconos/isotipo.png">
+	<link href="estilos/bootstrap.css" rel="stylesheet">
+	<link rel="icon" href="iconos/isotipo.png">
 	<title>Inscripciones Remotas</title>
-<link href="../estilos/signin.css" rel="stylesheet">
+<link href="estilos/signin.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/82ccab91a3.js" crossorigin="anonymous"></script>
 </head>
 <body>		
+
+<?php include 'nav.html';?>
 
 <?php
 	session_start();
@@ -47,11 +50,11 @@
 			<input type="text" id="inputUsuario" name="domicilio_A"  class="form-control" minlength="8" maxlength="8" placeholder="Dni Tutor" value="<?php echo $datosAlumno['Domicilio']; ?>">
             
             Escuela_A:
-            <input type="text" id="inputContraseña" name="escAnterior"  class="form-control" minlength="8" maxlength="8" placeholder="Dni Alumno" value="<?php echo $datosAlumno['Escuela_A']; ?>">
+            <input type="text" id="inputContraseña" name="escAnterior"  class="form-control" minlength="8" maxlength="8" placeholder="Dni Alumno" value="<?php echo $datosAlumno['Escuela_A']; ?>"><br>
             
-            <input type="hidden" id="id" name="id" value="<?php echo $referenciaAlumno; ?>" />
+            <input type="hidden" id="id" name="id" value="<?php echo $referenciaAlumno; ?>"/>
 			
-			<button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Modificar</button>
+			<button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Modificar</button><br>
             </center>
 </form>  
 
