@@ -42,8 +42,8 @@
 						echo"<div class='d-flex justify-content-between align-items-center'>";
 					echo"<div class='btn-group'>";
 					
-					$_SESSION['id_alumno']=$seleccionado['ID'];
-					echo"<a href='revisar.php' class='btn btn-secondary'>"."Revisar"."</a>";
+					$envio=$seleccionado['ID'];
+					echo"<a href='revisar.php?id=".$envio."' class='btn btn-secondary'>"."Revisar"."</a>";
 					echo"</div>";
 				echo"</div>";
 				echo"</div>";
@@ -55,7 +55,7 @@
 	
 	?>
 	<a href="alumno.php"><button  class="btn btn-lg btn-dark btn-block " type="submit" href="alumno.php">Añadir alumno<br></button></a>
-	<?php //include 'footer.html';?> 
+	<?php include 'footer.html';?> 
 </main>
 
 

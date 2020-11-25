@@ -5,13 +5,16 @@
 				}
     $conexion =mysqli_connect("localhost", "root", "","sorteo");
 	$seleccion="SELECT * FROM `chicos_i`";
-	$resultado = $con->query($seleccion);
+	$resultado = $conexion->query($seleccion);
 	
 ?>
 <!doctype html>
 <html lang="es">
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="../estilos/dist/css/bootstrap.css" rel="stylesheet">		 
+		<script src="../js/jquery.js"></script>
+		<script src="../js/bootstrap.js"></script>
 		<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
  
 <script type="text/javascript" src="DataTables/datatables.min.js"></script>
@@ -27,7 +30,7 @@
 				"infoFiltered": "(filtrada de _MAX_ registros)",
 				"loadingRecords": "Cargando...",
 				"processing":     "Procesando...",
-				"search": "Buscar:",
+				"search": "Buscar Por apellido:",
 				"zeroRecords":    "No se encontraron registros coincidentes",
 				"paginate": {
 					"next":       "Siguiente",
@@ -41,16 +44,6 @@
 	
 	<body style="background-color: #CED6F4">
 		<div class="container">
-			<!--<div class="row container text-center">
-				<div class="col">
-				<h3>Control de alumnos</h3>
-				</div>
-				<div class="col">
-				</div>
-				<div class="col text-right">	
-				<h3><a href="cerrar_sesion.php"><i class="fas fa-door-open"></i></a></h3>
-				</div>
-			</div>-->
 			
 			<div class="row table-responsive">
 				<table class="display" id="mitabla">
@@ -62,8 +55,7 @@
 							<th>Dni</th>
 							<th>Domicilio</th>
 							<th>Escuela Anterior</th>
-							<!-- <th>Modificar</th> -->
-							<th>Eliminar</th>
+							<th>Modificar</th>
 						</tr>
 					</thead>
 					
@@ -79,11 +71,10 @@
 								<td><?php echo $row['Domicilio'] ?> </td>
 								<td><?php echo $row['Escuela_A']; ?></td>	
 
-								<td><a href="#" data-href="eliminar.php?id=<?php echo $row['id_zap']; ?>" data-toggle="modal" data-target="#confirm-delete">
-									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill btn-outline-danger" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
- 									 <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
-									</svg></a>
-								</td>
+								<td><a href="modificar.php?id=<?php echo $row['ID']; ?>"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg%22%3E">
+                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                </svg></a></td>
 							</tr>
 						<?php } ?>
 					</tbody>
@@ -91,36 +82,7 @@
 			</div>
 		</div>
 		
-		<!-- Modal -->
-		<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialo°°g" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title">Eliminar Artículo</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						</h4>
-					</div>
-					
-					<div class="modal-body">
-						¿Desea eliminar este artículo?
-					</div>
-					
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-						<a class="btn btn-danger btn-ok">Eliminar</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<script>
-			$('#confirm-delete').on('show.bs.modal', function(e) {
-				$(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
-				
-				$('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
-			});
-		</script>	
-	<?php mysqli_close($con) ?>
+	<?php mysqli_close($conexion) ?>
 	</body>
 </html>
 

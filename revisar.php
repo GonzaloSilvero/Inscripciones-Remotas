@@ -16,7 +16,7 @@
 
     $conexion =mysqli_connect("localhost", "root", "","sorteo");
 
-    $referenciaAlumno = $_SESSION['id_alumno'];
+    $referenciaAlumno = $_REQUEST['id'];
 
 	$resultado_alumno= mysqli_query($conexion, "SELECT * FROM `chicos_i` WHERE `ID` = '$referenciaAlumno' ");
     $datosAlumno= mysqli_fetch_assoc($resultado_alumno);
