@@ -3,7 +3,6 @@
 <head>
 <?php include 'head.html';?>
 <link href="estilos/signin.css" rel="stylesheet">
-<title>Formulario de Inscripcion</title>
 </head>
     <body class="text-center">
         <form class="form-signin" action="index.php" method="POST">

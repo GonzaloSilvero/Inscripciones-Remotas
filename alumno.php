@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Formulario Ingresante</title>
 	<?php include 'head.html';?>
 	<link href="estilos/signin.css" rel="stylesheet">
 	<link href="estilos/alumno.css" rel="stylesheet">
