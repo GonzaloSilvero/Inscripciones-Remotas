@@ -34,7 +34,7 @@
             <input class="btn btn-lg btn-secondary btn-block" name="ingresar" type="submit" value="ingresar"><br>
         </form>
         
-        si no eres parte del establecimiento: <a href="tutor.php" >Registrarse</a>
+        Si no eres parte del establecimiento: <a href="tutor.php" >Registrarse</a>
         
         </center>
 
