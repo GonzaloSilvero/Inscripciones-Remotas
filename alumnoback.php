@@ -2,7 +2,6 @@
 <html>
 	<?php include 'head.html';?>
 	<link href="estilos/signin.css" rel="stylesheet">
-	<link href="estilos/alumno.css" rel="stylesheet">
 	<title>Registrar Ingresante</title>
 </head>
 <body>
@@ -26,49 +25,36 @@ if(isset($_REQUEST["existe"])){
 }
 ?>
         <form class="form-signin" action="alumno.php" method="POST">
+            <center>
 			<h1 class="h1 mb-3 font-weight-normal">Ingresante</h1>
-			<div class="container">
-				<div class="row">
+			
 					<input type="text" class="form-control" name="nombre_A" placeholder="Nombre" value="<?php echo $nombre?>" required autofocus>
-
-				</div>
-				<div class="row">
+	
 					<input type="text" class="form-control" name="apellido_A" placeholder="Apellido" value="<?php echo $apellido?>" required>
-					<div class="custom-file mb-3">
-						<input type="file" class="custom-file-input" id="validatedCustomFile" required>
-						<label class="custom-file-label" for="validatedCustomFile">Adjuntar Dni</label>
-						<div class="invalid-feedback">Example invalid custom file feedback</div>
-					</div>
 
-				</div>
-				<div class="row">
 					<input type="text" class="form-control" name="edad_A" maxlength="2" placeholder="Edad" value="<?php echo $edad?>" required autofocus>
 
-				</div>
-				<div class="row">
 					<input type="text" class="form-control" name="dni_A" maxlength="8" placeholder="DNI" required>
 
-				</div>
-				<div class="row">
 					<input type="text" class="form-control" name="ano_A" maxlength="1" placeholder="Año a Ingresar" value="<?php echo $año?>" required>
 
-					<input type="file" class="form-control" id="validatedCustomFile" required>
-
-				</div>
-				<div class="row">
 					<input type="text"  class="form-control" name="domicilio_A" placeholder="Domicilio" value="<?php echo $domicilio?>" required autofocus>
 
-				</div>
-				<div class="row">
-					<input type="text" class="form-control" name="escAnterior" placeholder="Escuela anterior" value="<?php echo $escuela?>" required>
-				</div>
-			</div>
+					<input type="text" class="form-control" name="escAnterior" placeholder="Escuela anterior" value="<?php echo $escuela?>" required><br>
 
 					<button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Ingresar</button>
 
+					<div class="adjuntados">
+						Adjuntar DNI<br>
+						<input type="file" name="ImagDNI_A" accept="image/*" required>
+					</div>
 
-
-
+					<div class="adjuntados">
+						Adjuntar Constancia<br>
+						<input type="file" name="constancia" accept="image/*" required>
+					</div>
+			</center>
+        </form>
 	</form>
 
 
