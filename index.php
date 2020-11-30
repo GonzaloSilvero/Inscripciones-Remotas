@@ -27,10 +27,13 @@
         <form class="form-signin mt-5" action="index.php" method="POST">
             <h1 class="h1">Formulario de inscripcion</h1>
             <center>
-            <label for="inputTutor" class="sr-only">Usuario<br></label>
+
+            <h5>Usuario</h5>
             <input type="text" id="inputTutor" name="usuario" class="form-control" maxlength="8" placeholder="Dni Tutor" required autofocus>
-            <label for="inputAlumn" class="sr-only">Contraseña<br></label>
+
+            <h5>Contraseña</h5>
             <input type="password" id="inputAlumn" name="contrasena" class="form-control" maxlength="8" placeholder="Dni Alumno" required>
+
             <input class="btn btn-lg btn-secondary btn-block" name="ingresar" type="submit" value="ingresar"><br>
         </form>
         
