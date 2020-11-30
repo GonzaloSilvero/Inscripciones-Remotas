@@ -28,9 +28,9 @@
             <h1 class="h1">Formulario de inscripcion</h1>
             <center>
             <label for="inputTutor" class="sr-only">Usuario<br></label>
-            <input type="text" id="inputTutor" name="usuario" class="form-control" placeholder="Dni Tutor" required autofocus>
+            <input type="text" id="inputTutor" name="usuario" class="form-control" maxlength="8" placeholder="Dni Tutor" required autofocus>
             <label for="inputAlumn" class="sr-only">Contraseña<br></label>
-            <input type="password" id="inputAlumn" name="contrasena" class="form-control" placeholder="Dni Alumno" required>
+            <input type="password" id="inputAlumn" name="contrasena" class="form-control" maxlength="8" placeholder="Dni Alumno" required>
             <input class="btn btn-lg btn-secondary btn-block" name="ingresar" type="submit" value="ingresar"><br>
         </form>
         
