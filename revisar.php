@@ -31,7 +31,13 @@
 	<div class="form-signin">
             <center>
             <h1 class="h1 mb-3 font-weight-normal">Datos del Alumno</h1>
-			<input type="text" id="inputNombre" class="form-control" placeholder="Nombre: " value="<?php echo "Nombre: ".$datosAlumno['Nombre']; ?>" disabled >
+            <div class="input-group">
+
+			<input type="text" id="inputGroupSelect04" class="form-control" placeholder="Nombre: " value="<?php echo "Nombre: ".$datosAlumno['Nombre']; ?>" disabled >
+			<div class="input-group-append">
+				<button class="btn btn-outline-secondary" type="button">hola</button>
+			</div>
+			</div>
 			
 			<input type="text" id="inputApellido" class="form-control" placeholder="Apellido" value="<?php echo "Apellido: ".$datosAlumno['Apellido']; ?>" disabled>
 

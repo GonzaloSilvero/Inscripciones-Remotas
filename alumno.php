@@ -2,7 +2,6 @@
 <html>
 	<?php include 'head.html';?>
 	<link href="estilos/signin.css" rel="stylesheet">
-	<link href="estilos/alumno.css" rel="stylesheet">
 	<title>Registrar Ingresante</title>
 </head>
 <body>
@@ -42,11 +41,11 @@ if(isset($_REQUEST["existe"])){
 
 					<input type="text" class="form-control" name="escAnterior" placeholder="Escuela anterior" value="<?php echo $escuela?>" required>
 
-					<h5>Adjuntar Dni</h5>
+					<!--<h5>Adjuntar Dni</h5>
 					<input type="file" class="form-control" required>
 					
 					<h5>Adjuntar Constancia</h5>
-					<input type="file" class="form-control" required>
+					<input type="file" class="form-control" required>-->
 
 					<button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Ingresar</button>
 
