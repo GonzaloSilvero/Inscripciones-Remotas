@@ -24,22 +24,16 @@
 	<form class="form-signin mt-5" action="tutor.php" method="POST">
             <center>
             <h1 class="h1 mb-3 font-weight-normal">Registro</h1>
-            <label for="inputNombre" class="sr-only">Nombre</label>
 			<input type="text" id="inputNombre" class="form-control" name="nombre_T" placeholder="Nombre" required autofocus>
 			
-            <label for="inputApellido" class="sr-only">Apellido</label>
 			<input type="text" id="inputApellido" class="form-control" name="apellido_T" placeholder="Apellido" required>
 
-			<label for="inputTel" class="sr-only">Telefono</label>
 			<input type="tel" id="inputTel" class="form-control" name="telefono_T" maxlength="10" placeholder="Telefono" required autofocus>
 			
-            <label for="inputEmail" class="sr-only">Email</label>
 			<input type="email" id="inputEmail" class="form-control" name="email_T" placeholder="Email" required>
 
-			<label for="inputUsuario" class="sr-only">Usuario</label>
 			<input type="text" id="inputUsuario" class="form-control" name="usuario_T" minlength="8" maxlength="8" placeholder="Dni Tutor" required autofocus>
 			
-            <label for="inputContraseña" class="sr-only">Contraseña</label>
 			<input type="text" id="inputContraseña" class="form-control" name="contrasena_T" minlength="8" maxlength="8" placeholder="Dni Alumno" required>
 			
             <button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Ingresar</button>
