@@ -41,13 +41,20 @@ if(isset($_REQUEST["existe"])){
 
 					<input type="text" class="form-control" name="escAnterior" placeholder="Escuela anterior" value="<?php echo $escuela?>" required>
 
-					<!--<h5>Adjuntar Dni</h5>
-					<input type="file" class="form-control" required>
-					
-					<h5>Adjuntar Constancia</h5>
-					<input type="file" class="form-control" required>-->
 
-					<button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Ingresar</button>
+					<h6>Adjuntar DNI</h6>
+				<div class="custom-file">
+				    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+				    <label class="custom-file-label" for="inputGroupFile01">Subir Foto</label>
+				</div><br>
+
+					<h6>Adjuntar Constancia</h6>
+				<div class="custom-file">
+				  <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+				  <label class="custom-file-label" for="inputGroupFile01">Subir Foto</label>
+				</div><br>
+
+					<button class="btn btn-lg btn-secondary btn-block mt-4" name="ida" type="submit">Ingresar</button>
 
 				</center>
 	</form>
