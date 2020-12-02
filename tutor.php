@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Registro Tutor</title>
-	<link rel="stylesheet" type="text/css" href="estilos/Tutor.css">
+<?php include 'head.html';?>
+<link href="estilos/signin.css" rel="stylesheet">
+<title>Registro</title>
 </head>
+<body>		
 
-<body> 
-    <?php require_once 'helpers.php'; ?>
-    <?php require_once 'efectuarRegistro.php'; ?>
-    
-    <div>
+	<form class="form-signin" action="tutor.php" method="POST">
+            <center>
+            <h1 class="h1 mb-3 font-weight-normal">Registro</h1>
+            <label for="inputNombre" class="sr-only">Nombre</label>
+			<input type="text" id="inputNombre" class="form-control" name="nombre_T" placeholder="Nombre" required autofocus>
+			
+            <label for="inputApellido" class="sr-only">Apellido</label>
+			<input type="text" id="inputApellido" class="form-control" name="apellido_T" placeholder="Apellido" required>
+
+			<label for="inputTel" class="sr-only">Telefono</label>
+			<input type="tel" id="inputTel" class="form-control" name="telefono_T" maxlength="10" placeholder="Telefono" required autofocus>
+			
+            <label for="inputEmail" class="sr-only">Email</label>
+			<input type="email" id="inputEmail" class="form-control" name="email_T" placeholder="Email" required>
+
+			<label for="inputUsuario" class="sr-only">Usuario</label>
+			<input type="text" id="inputUsuario" class="form-control" name="usuario_T" minlength="8" maxlength="8" placeholder="Dni Tutor" required autofocus>
+			
+            <label for="inputContraseña" class="sr-only">Contraseña</label>
+			<input type="text" id="inputContraseña" class="form-control" name="contrasena_T" minlength="8" maxlength="8" placeholder="Dni Alumno" required>
+			
+            <button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Ingresar</button>
+            </center>
+        </form>
+	<?php
+
+	$conexion =mysqli_connect("localhost", "root", "","sorteo");
+
+
+	//require_once 'conexiones.php';
+		if (isset($_POST['ida'])) {
+			
+			//Recoger los valores del formulario de registro
+			$nombre_T= $_POST['nombre_T'];
+			$apellido_T= $_POST['apellido_T'];
+			$telefono_T= $_POST['telefono_T'];
+			$Email_T= $_POST['email_T'];
+			$Usuario_T= $_POST['usuario_T'];
+			$contrasena_T= $_POST['contrasena_T'];
+			//$contrasena_T_codificada=password_hash($contrasena_T, PASSWORD_DEFAULT);
+			$consulta="INSERT INTO `tutor` (`Nombre`, `Apellido`, `Telefono`, `Usuario`, `Gmail`, `Contraseña`) VALUES ('$nombre_T', '$apellido_T', '$telefono_T', '$Usuario_T', '$Email_T', '$contrasena_T');";
+			$resultado= mysqli_query($conexion, $consulta);
+
+			header("Location: index.php");
+			die();
+		}
+		include 'footer.html';
+	?>
+
 	
-	<?php  if (isset($_SESSION['errores'])):?>		
-	<?php 	var_dump($_SESSION['errores']);?>
-	<?php  endif;?>
-
-	<h3>Registro</h3>
-
-    <form action="efectuarRegistro.php" method="POST">	
-
-		<label for ="Nombre_T">Nombre</label><br>
-		<input type="text" name="Nombre_T"/><br>
-		<?php echo mostrarError($_SESSION['errores'],'Nombre_T'); ?>
- 
-		<label for ="Apellido_T">Apellido</label><br>
-		<input type="text" name="Apellido_T"/><br>
-		
-
-		<label for ="Telefono_T">Telefono</label><br>
-		<input type="tel" name="Telefono_T"/><br>
-		
-
-
-		<label for ="Gmail_T">Gmail</label><br>
-		<input type="email" name="Gmail_T"/><br>
-		
-
-
-
-		<label for ="Usuario_T">Usuario</label><br>
-		<input type="text" name="Usuario_T"/><br>
-		
-
-
-		<label for ="password_T">Contraseña</label><br>
-		<input type="password" name="password_T"/><br>
-		
-
-
-		<input type="submit" name='submit' value="Registrarse">
-	</form>
-    </div>
 </body>
 </html>

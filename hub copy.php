@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<?php include 'head.html';?>
-<link href="estilos/album.css" rel="stylesheet">
-<title>Alumnos Registrados</title>
+	<title>Alumnos</title>
+	<?php include 'head.html';?>
 </head>
 	<?php
 		session_start();
@@ -41,7 +40,6 @@
 						echo"<p class='card-text'>"."dni: ".$seleccionado['dni']."<br>"."edad: ".$seleccionado['Edad']."</p>";
 						echo"<div class='d-flex justify-content-between align-items-center'>";
 					echo"<div class='btn-group'>";
-					$_SESSION['id_alumno']=$seleccionado['ID'];
 					echo"<a href='#' class='btn btn-secondary'>"."Revisar"."</a>";
 					echo"</div>";
 				echo"</div>";
