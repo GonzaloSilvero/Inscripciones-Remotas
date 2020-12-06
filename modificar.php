@@ -8,7 +8,7 @@
 <link href="estilos/signin.css" rel="stylesheet">
 <script src="https://kit.fontawesome.com/82ccab91a3.js" crossorigin="anonymous"></script>
 </head>
-<body>		
+<body>
 
 <?php include 'nav.html';?>
 
@@ -19,7 +19,7 @@
         header("location:../index.php");
     }
 
-    $conexion =mysqli_connect("localhost", "root", "","sorteo");
+    include 'conexion.php';
 
     $referenciaAlumno = $_REQUEST['id'];
 
@@ -31,15 +31,15 @@
 	<form class="form-signin" action="logicaModificar.php" method="POST">
             <center>
             <h1 class="h1 mb-3 font-weight-normal">Datos del Alumno</h1>
-            Nombre: 
+            Nombre:
 			<input type="text" id="inputNombre" name="nombre_A" class="form-control" placeholder="Nombre: " value="<?php echo $datosAlumno['Nombre']; ?>">
-            
-            Apellido: 
+
+            Apellido:
 			<input type="text" id="inputApellido" name="apellido_A"  class="form-control" placeholder="Apellido" value="<?php echo $datosAlumno['Apellido']; ?>">
 
-            Edad: 
+            Edad:
 			<input type="tel" id="inputTel" name="edad_A"  class="form-control" maxlength="10" placeholder="Telefono" value="<?php echo $datosAlumno['Edad']; ?>">
-            
+
             DNI:
             <input type="num" id="inputDNI" name="dni_A"  class="form-control" placeholder="DNI" value="<?php echo $datosAlumno['dni']; ?>">
 
@@ -48,16 +48,16 @@
 
             Domicilio:
 			<input type="text" id="inputUsuario" name="domicilio_A"  class="form-control" minlength="8" maxlength="8" placeholder="Dni Tutor" value="<?php echo $datosAlumno['Domicilio']; ?>">
-            
+
             Escuela_A:
             <input type="text" id="inputContraseña" name="escAnterior"  class="form-control" minlength="8" maxlength="8" placeholder="Dni Alumno" value="<?php echo $datosAlumno['Escuela_A']; ?>"><br>
-            
+
             <input type="hidden" id="id" name="id" value="<?php echo $referenciaAlumno; ?>"/>
-			
+
 			<button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Modificar</button><br>
             </center>
-</form>  
+</form>
 
-	
+
 </body>
 </html>

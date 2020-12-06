@@ -4,8 +4,8 @@ if (!isset($_SESSION["admin"])) {
     header("location:index.php");
 }
 
-if (isset($_POST['ida'])) {			
-    $conexion =mysqli_connect("localhost", "root", "","sorteo");
+if (isset($_POST['ida'])) {
+    include 'conexion.php';
 
     //Recoger los valores del formulario de registro
     $nombre_A= $_POST['nombre_A'];

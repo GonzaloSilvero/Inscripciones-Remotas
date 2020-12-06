@@ -8,7 +8,7 @@
 
 
     <body class="text-center">
-        
+
 <header>
 <nav class="navbar navbar-expand navbar-dark bg-dark" >
     <a class="navbar-brand" href="https://www.instagram.com/tecnicacatorce/"><i class="fab fa-instagram"></i></a>
@@ -36,17 +36,17 @@
 
             <input class="btn btn-lg btn-secondary btn-block" name="ingresar" type="submit" value="ingresar"><br>
         </form>
-        
+
         Si no eres parte del establecimiento: <a href="tutor.php" >Registrarse</a>
-        
+
         </center>
 
         <?php
-            
+
 
             if (isset($_POST['ingresar']))
             {
-                $conexion =mysqli_connect("localhost", "root", "","sorteo");
+                include 'conexion.php';
                 //Recoger los valores del formulario de registro
                 $usuario = $_POST['usuario'];
                 $contrasena= $_POST['contrasena'];
@@ -54,7 +54,7 @@
                 $resultado_usuario= mysqli_query($conexion, "SELECT * FROM `tutor` WHERE `Usuario` = '$usuario' ");
                 $usuarioBase= mysqli_fetch_assoc($resultado_usuario);
 
-                
+
                 if ($usuario == 00000000) {
                     if ($contrasena == 00000000) {
                         session_start();
@@ -68,20 +68,20 @@
                         session_start();
                         $_SESSION['usuario']=$_POST['usuario'];
                         header("Location: hub.php");
-                        die();    
+                        die();
                     }
                     else
                     {
                         echo '<script type="text/javascript">alert("contraseña erronea");</script>';
                     }
                 }
-                else 
+                else
                 {
                     echo '<script type="text/javascript">alert("usuario invalido");</script>';
                 }
                 mysqli_close($conexion);
             }
-            
+
             include 'footer.html';
             ?>
     </body>

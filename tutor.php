@@ -4,7 +4,7 @@
 <link href="estilos/signin.css" rel="stylesheet">
 <title>Registro Tutor</title>
 </head>
-<body>		
+<body>
 
 <header>
 <nav class="navbar navbar-expand navbar-dark bg-dark" >
@@ -25,30 +25,30 @@
             <center>
             <h1 class="h1 mb-3 font-weight-normal">Registro</h1>
 			<input type="text" id="inputNombre" class="form-control" name="nombre_T" placeholder="Nombre" required autofocus>
-			
+
 			<input type="text" id="inputApellido" class="form-control" name="apellido_T" placeholder="Apellido" required>
 
 			<input type="tel" id="inputTel" class="form-control" name="telefono_T" maxlength="10" placeholder="Telefono" required autofocus>
-			
+
 			<input type="email" id="inputEmail" class="form-control" name="email_T" placeholder="Email" required>
 
-			<h5>Usuario</h5>	
+			<h5>Usuario</h5>
 			<input type="text" id="inputUsuario" class="form-control" name="usuario_T" minlength="8" maxlength="8" placeholder="Dni Tutor" required autofocus>
-			
+
 			<h5>Contraseña</h5>
 			<input type="text" id="inputContraseña" class="form-control" name="contrasena_T" minlength="8" maxlength="8" placeholder="Dni Alumno" required>
-			
+
             <button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Ingresar</button>
             </center>
         </form>
 	<?php
 
-	$conexion =mysqli_connect("localhost", "root", "","sorteo");
+	include 'conexion.php';
 
 
 	//require_once 'conexiones.php';
 		if (isset($_POST['ida'])) {
-			
+
 			//Recoger los valores del formulario de registro
 			$nombre_T= $_POST['nombre_T'];
 			$apellido_T= $_POST['apellido_T'];
@@ -66,6 +66,6 @@
 		include 'footer.html';
 	?>
 
-	
+
 </body>
 </html>
