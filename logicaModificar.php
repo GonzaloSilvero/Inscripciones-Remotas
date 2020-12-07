@@ -25,4 +25,4 @@ if (isset($_POST['ida'])) {
     header("location: panel.php");
 }
     //include 'footer.html';
-	?>
+?>
