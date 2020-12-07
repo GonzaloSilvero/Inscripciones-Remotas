@@ -45,13 +45,13 @@ if(isset($_REQUEST["existe"])){
 					<h6>Adjuntar DNI</h6>
 				<div class="custom-file">
 				    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-				    <label class="custom-file-label" for="inputGroupFile01">Subir Foto</label>
+				    <label class="custom-file-label" name="ImagDNI_A" for="inputGroupFile01">Subir Foto</label>
 				</div><br>
 
 					<h6>Adjuntar Constancia</h6>
 				<div class="custom-file">
 				  <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-				  <label class="custom-file-label" for="inputGroupFile01">Subir Foto</label>
+				  <label class="custom-file-label" name="constancia" for="inputGroupFile01">Subir Foto</label>
 				</div><br>
 
 					<button class="btn btn-lg btn-secondary btn-block mt-4" name="ida" type="submit">Ingresar</button>
