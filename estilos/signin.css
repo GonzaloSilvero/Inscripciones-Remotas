@@ -1,6 +1,6 @@
 html,
 body {
-  height: 85%;
+  height: auto;
 }
 
 .bd-placeholder-img {
@@ -18,19 +18,22 @@ body {
   }
 }
 
-body {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #f5f5f5;
-}
 
 .form-signin {
+  margin-top: 35px;
   padding: 15px;
   margin: auto;
+}
+
+@media (max-width: 376px) {
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: 50px;
+    padding: 10px;
+    font-size: 16px;
+    width: 70vw;
+  }
 }
 
 @media (min-width: 376px) {
@@ -79,6 +82,77 @@ body {
   
   @media (min-width: 1200px) {
     .form-signin .form-control {
+      position: relative;
+      box-sizing: border-box;
+      height: 50px;
+      padding: 10px;
+      font-size: 16px;
+      width: 25vw;
+    }
+  }
+
+/*-------------------------------------------*/
+
+@media (max-width: 376px) {
+  .form-signin .form-control-dis {
+    position: relative;
+    box-sizing: border-box;
+    height: 70px;
+    padding: 10px;
+    font-size: 16px;
+    width: 60vw;
+    margin-left:-10px; 
+
+  }
+}
+
+@media (min-width: 376px) {
+  .form-signin .form-control-dis {
+    position: relative;
+    box-sizing: border-box;  
+    height: 50px;
+    padding: 10px;
+    font-size: 16px;
+    width: 65vw;
+    margin-left: 20px;   
+  }
+}
+
+  @media (min-width: 576px) {
+    .form-signin .form-control-dis {
+      position: relative;
+      box-sizing: border-box;
+      height: 50px;
+      padding: 10px;
+      font-size: 16px;
+      width: 53vw;
+    }
+  }
+  
+  @media (min-width: 868px) {
+    .form-signin .form-control-dis {
+      position: relative;
+      box-sizing: border-box;
+      height: 50px;
+      padding: 10px;
+      font-size: 16px;
+      width: 40vw;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .form-signin .form-control-dis {
+      position: relative;
+      box-sizing: border-box;
+      height: 50px;
+      padding: 10px;
+      font-size: 16px;
+      width: 23vw;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .form-signin .form-control-dis {
       position: relative;
       box-sizing: border-box;
       height: 50px;
