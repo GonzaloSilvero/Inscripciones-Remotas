@@ -96,11 +96,10 @@ if(isset($_REQUEST["repe"])){
 					}
 					else
 					{
-						echo "si";
-						/*$consulta="INSERT INTO `tutor` (`Nombre`, `Apellido`, `Telefono`, `Usuario`, `Gmail`, `Contraseña`) VALUES ('$nombre_T', '$apellido_T', '$telefono_T', '$Usuario_T', '$Email_T', '$contrasena_T');";
+						$consulta="INSERT INTO `tutor` (`Nombre`, `Apellido`, `Telefono`, `Usuario`, `Gmail`, `Contraseña`) VALUES ('$nombre_T', '$apellido_T', '$telefono_T', '$Usuario_T', '$Email_T', '$contrasena_T');";
 						$resultado= mysqli_query($conexion, $consulta);
 						header("Location: index.php");
-						die();*/
+						die();
 					}
 				}
 			}

@@ -43,10 +43,29 @@ if(isset($_REQUEST["existe"])){
 
 
 					<h6>Adjuntar DNI</h6>
-				<div class="custom-file">
-				    <input type="file" class="custom-file-input" id="inputGroupFile01" name="ImagDNI_A" aria-describedby="inputGroupFileAddon01">
+					<input type="file" id="a" name="ImagDNI_A">
+				<!--<div class="custom-file">
+				    <input type="file" class="custom-file-input" id="a" name="ImagDNI_A" aria-describedby="inputGroupFileAddon01">
 				    <label class="custom-file-label" for="inputGroupFile01">Subir Foto</label>
-				</div><br>
+				</div>--><br>
+
+
+				<script type="text/javascript">
+					document.getElementById("a").onchange = function(e) {
+					// Creamos el objeto de la clase FileReader
+					let reader = new FileReader();
+					// Leemos el archivo subido y se lo pasamos a nuestro fileReader
+					reader.readAsDataURL(e.target.files[0]);
+					// Le decimos que cuando este listo ejecute el código interno
+					reader.onload = function(){
+						let preview = document.getElementById('preview'),
+								image = document.createElement('img');
+						image.src = reader.result;
+						preview.innerHTML = '';
+						preview.append(image);
+					};
+					} 
+				</script>
 
 					<h6>Adjuntar Constancia</h6>
 				<div class="custom-file">
