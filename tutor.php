@@ -43,7 +43,7 @@ if(isset($_REQUEST["repe"])){
 </nav>
 </header>
 
-	<form class="form-signin mt-5" action="tutor.php" method="POST">
+	<form class="form-signin mt-5" id="formulario" action="tutor.php" method="POST">
             <center>
             <h1 class="h1 mb-3 font-weight-normal">Registro</h1>
 			<input type="text" id="inputNombre" class="form-control" name="nombre_T" placeholder="Nombre" value="<?php echo $nombre?>" required autofocus>
@@ -55,17 +55,19 @@ if(isset($_REQUEST["repe"])){
 			<input type="email" id="inputEmail" class="form-control" name="email_T" placeholder="Email" value="<?php echo $email?>" required>
 
 			<h5>Usuario</h5>
-			<input type="text" id="inputUsuario" class="form-control" name="usuario_T" minlength="8" maxlength="8" placeholder="Dni Tutor" required autofocus>
+			<input type="text"  class="form-control" name="usuario_T" id="dni1" minlength="8" maxlength="8" placeholder="Dni Tutor" required autofocus>
 
 			<h5>Repita Usuario</h5>
-			<input type="text" id="inputUsuario" class="form-control" name="Rusuario_T" minlength="8" maxlength="8" placeholder="Dni Tutor" required autofocus>
+			<input type="text"  class="form-control" name="Rusuario_T" id="dni2" minlength="8" maxlength="8" placeholder="Dni Tutor" required autofocus>
 
 			<h5>Contraseña</h5>
 			<input type="text" id="inputContraseña" class="form-control" name="contrasena_T" minlength="8" maxlength="8" placeholder="Dni Alumno" required>
 
-            <button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Ingresar</button>
+            <button class="btn btn-lg btn-secondary btn-block" name="ida" id="enviar" type="submit">Ingresar</button>
             </center>
-        </form>
+		</form>
+		<script src="validaciones/jquery-3.5.1.js"></script>
+    	<script src="validaciones/validar.js"></script>
 	<?php
 
 	include 'conexion.php';

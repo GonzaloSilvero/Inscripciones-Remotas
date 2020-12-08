@@ -59,7 +59,7 @@
                     if ($contrasena == 00000000) {
                         session_start();
                         $_SESSION['admin']= "admin";
-                        header("Location:panel.php");
+                        header("Location:panel/panel.php");
                         die();
                     }
                 }
