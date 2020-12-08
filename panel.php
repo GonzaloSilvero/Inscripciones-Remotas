@@ -50,6 +50,7 @@
 				<table class="display" id="mitabla">
 					<thead>
 						<tr>
+							<th>ID</th>
 							<th>Nombre</th>
 							<th>Apellido</th>
                             <th>Edad</th>
@@ -59,6 +60,7 @@
 							<th>Escuela Anterior</th>
 							<th>i_DNI</th>
 							<th>Constancia</th>
+							<th>solicitud</th>
 							<th>Modificar</th>
 						</tr>
 					</thead>
@@ -67,6 +69,7 @@
 						<?php while($row = $resultado->fetch_array(MYSQLI_ASSOC)) {
 							?>
 							<tr>
+								<td><?php echo $row['ID']; ?></td>
 								<td><?php echo $row['Nombre']; ?></td>
 								<td><?php echo $row['Apellido']; ?></td>
 								<td><?php echo $row['Edad']; ?></td>
@@ -75,8 +78,13 @@
 								<td><?php echo $row['Domicilio'] ?> </td>
 								<td><?php echo $row['Escuela_A']; ?></td>
 								<td></td>
-							
 								<td></td>
+								<td>	   
+								<?php $solicitud = $row['solicitud']; ?>
+								<input type="checkbox" name="checkbox" id='<?php echo $row['ID']; ?>' value= '$solicitud' >
+							    <script src="actualizar.js"></script>
+							  	
+								</td>
 
 
 								<td><a href="modificar.php?id=<?php echo $row['ID']; ?>"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg%22%3E">
