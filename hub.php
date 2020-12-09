@@ -13,7 +13,7 @@
 	?>
 <body>
 <?php include 'nav.html';?>
-	<h1>Alumnos Registrados</h1>
+	<h1>Aspirantes Registrados</h1>
 	<main>
 	<div class="container">
 	<?php
@@ -57,7 +57,7 @@
 	echo"</div>";
 
 	?>
-	<a href="alumno.php"><button  class="btn btn-lg btn-dark btn-block " type="submit" href="alumno.php">Añadir alumno<br></button></a>
+	<a href="alumno.php"><button  class="btn btn-lg btn-dark btn-block " type="submit" href="alumno.php">Añadir Aspirantes<br></button></a>
 	<?php include 'footer.html';?>
 	</div>
 </main>

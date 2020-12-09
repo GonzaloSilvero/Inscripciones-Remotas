@@ -2,7 +2,7 @@
 <html>
 	<?php include 'head.html';?>
 	<link href="estilos/signin.css" rel="stylesheet">
-	<title>Registrar Ingresante</title>
+	<title>Registrar Aspirante</title>
 </head>
 <body>
 <?php include 'nav.html';?>
@@ -26,7 +26,7 @@ if(isset($_REQUEST["existe"])){
 ?>
         <form class="form-signin" action="alumno.php" method="POST">
         	<center>
-			<h1 class="h1 mb-3 font-weight-normal">Aspirante</h1>
+			<h1 class="h1 mb-3 font-weight-normal">Registrar Aspirante</h1>
 					<input type="text" class="form-control" name="nombre_A" placeholder="Nombre" value="<?php echo $nombre?>" required autofocus>
 
 					<input type="text" class="form-control" name="apellido_A" placeholder="Apellido" value="<?php echo $apellido?>" required>

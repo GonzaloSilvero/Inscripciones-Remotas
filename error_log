@@ -1,0 +1,6 @@
+[09-Dec-2020 08:25:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/u761283263/domains/eest14lamatanza.edu.ar/public_html/hub.php on line 25
+[09-Dec-2020 08:25:01 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/u761283263/domains/eest14lamatanza.edu.ar/public_html/hub.php on line 34
+[09-Dec-2020 12:08:49 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/u761283263/domains/eest14lamatanza.edu.ar/public_html/hub.php on line 25
+[09-Dec-2020 12:08:49 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/u761283263/domains/eest14lamatanza.edu.ar/public_html/hub.php on line 34
+[09-Dec-2020 16:41:45 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/u761283263/domains/eest14lamatanza.edu.ar/public_html/hub.php on line 25
+[09-Dec-2020 16:41:45 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/u761283263/domains/eest14lamatanza.edu.ar/public_html/hub.php on line 34
