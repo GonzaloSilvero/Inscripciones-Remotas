@@ -2,11 +2,26 @@
 <html>
 <?php include 'head.html';?>
 <link href="estilos/signin.css" rel="stylesheet">
-<title>Registro</title>
+<title>Registro Tutor</title>
 </head>
 <body>		
 
-	<form class="form-signin" action="tutor.php" method="POST">
+<header>
+<nav class="navbar navbar-expand navbar-dark bg-dark" >
+    <a class="navbar-brand" href="https://www.instagram.com/tecnicacatorce/"><i class="fab fa-instagram"></i></a>
+    <a class="navbar-brand" href="https://www.facebook.com/profile.php?id=100006789528190"><i class="fab fa-facebook"></i></a>
+    <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+        </li>
+        <li class="nav-item">
+        </li>
+        </ul>
+    </div>
+</nav>
+</header>
+
+	<form class="form-signin mt-5" action="tutor.php" method="POST">
             <center>
             <h1 class="h1 mb-3 font-weight-normal">Registro</h1>
             <label for="inputNombre" class="sr-only">Nombre</label>

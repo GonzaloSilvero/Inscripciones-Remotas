@@ -59,9 +59,10 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  text-align: left;
+  text-align: center;
   background-color: #d2d9df;
-  /*margin-bottom: 100vw;*/
+  margin-bottom: 75px;
+  width: 100%;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -81,12 +82,13 @@ h1 {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 1px;
+  margin-bottom: 100px;
 }
 
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
 abbr[title],
@@ -279,7 +281,7 @@ button,
 
 /*este tiene las caracteristicas del boton*/
 
-@media (max-width:576px){
+@media (max-width:376px){
   button:not(:disabled),
   [type="button"]:not(:disabled),
   [type="reset"]:not(:disabled),
@@ -289,23 +291,43 @@ button,
   }
 }
 
-@media (max-width:798px){
+@media (min-width:376px){
   button:not(:disabled),
   [type="button"]:not(:disabled),
   [type="reset"]:not(:disabled),
   [type="submit"]:not(:disabled) {
     cursor: pointer;
-    width: 60vw;
+    width: 40vw;
   }
 }
 
-@media (max-width:992px){
+@media (min-width:576px){
   button:not(:disabled),
   [type="button"]:not(:disabled),
   [type="reset"]:not(:disabled),
   [type="submit"]:not(:disabled) {
     cursor: pointer;
-    width: 62vw;
+    width: 25vw;
+  }
+}
+
+@media (min-width:798px){
+  button:not(:disabled),
+  [type="button"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  [type="submit"]:not(:disabled) {
+    cursor: pointer;
+    width: 20vw;
+  }
+}
+
+@media (min-width:992px){
+  button:not(:disabled),
+  [type="button"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  [type="submit"]:not(:disabled) {
+    cursor: pointer;
+    width:14.5vw;
   }
 }
 
@@ -630,6 +652,7 @@ pre code {
   padding-left: 0;
 }
 
+/*PADDING HORIZONTAL*/
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
@@ -4477,6 +4500,19 @@ input[type="button"].btn-block {
   background-size: 100% 100%;
 }
 
+@media (max-width: 376px) {
+  .navbar-expand {
+    height: 14vw;
+  }
+  }
+
+@media (min-width: 376px) {
+.navbar-expand {
+  height: 10vw;
+}
+}
+
+
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid, .navbar-expand-sm > .container-sm, .navbar-expand-sm > .container-md, .navbar-expand-sm > .container-lg, .navbar-expand-sm > .container-xl {
@@ -4486,6 +4522,10 @@ input[type="button"].btn-block {
 }
 
 @media (min-width: 576px) {
+  .navbar-expand {
+    height: 6vw;
+  }
+
   .navbar-expand-sm {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
@@ -4528,6 +4568,9 @@ input[type="button"].btn-block {
 }
 
 @media (min-width: 768px) {
+  .navbar-expand {
+    height: 5vw;
+  }
   .navbar-expand-md {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
@@ -4570,6 +4613,10 @@ input[type="button"].btn-block {
 }
 
 @media (min-width: 992px) {
+  .navbar-expand {
+    height: 3.5vw;
+  }
+
   .navbar-expand-lg {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
@@ -4612,6 +4659,10 @@ input[type="button"].btn-block {
 }
 
 @media (min-width: 1200px) {
+  .navbar-expand {
+    height: 2.4vw;
+  }
+
   .navbar-expand-xl {
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
@@ -4825,11 +4876,12 @@ input[type="button"].btn-block {
   border-top: 0;
 }
 
+/*PADDING VERTICAL*/
 .card-body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  padding: 1rem;
 }
 
 .card-title {
@@ -8338,6 +8390,10 @@ button.bg-dark:focus {
 .ml-5,
 .mx-5 {
   margin-left: 3rem !important;
+}
+
+.mt-6 {
+  margin-top: 7rem !important;
 }
 
 .p-0 {

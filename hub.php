@@ -3,7 +3,7 @@
 <head>
 <?php include 'head.html';?>
 <link href="estilos/album.css" rel="stylesheet">
-<title>Alumnos Registrados</title>
+<title>Usuario</title>
 </head>
 	<?php
 		session_start();
@@ -12,7 +12,10 @@
 		}
 	?>
 <body>
+<?php include 'nav.html';?>
 	<h1>Alumnos Registrados</h1>
+	<main>
+	<div class="container">
 	<?php
 
 	$conexion =mysqli_connect("localhost", "root", "","sorteo");
@@ -25,9 +28,9 @@
 	$busqueda="SELECT * FROM `tienechicos` WHERE `id_tutor` = $id_tutor";
 	$resultado1= mysqli_query($conexion, $busqueda);
 
+	$contador=0;
 	
-	
-		echo"<div class='row'>";
+	echo"<div class='row'>";
 		while($resultadot = mysqli_fetch_assoc($resultado1)){
 			$id_chico=$resultadot['id_chicos'];
 			$seleccion="SELECT * FROM `chicos_i` WHERE `ID` = $id_chico";
@@ -37,26 +40,30 @@
 			echo"<div class='col-md-4'>";
 				echo"<div class='card mb-4 shadow-sm'>";
 					echo"<div class='card-body'>";
-						echo"<h5 class='card-title'>".$seleccionado['Nombre']." ".$seleccionado['Apellido']."</h5>";
+						echo"<h4 class='card-title'>".$seleccionado['Nombre']." ".$seleccionado['Apellido']."</h4>";
 						echo"<p class='card-text'>"."dni: ".$seleccionado['dni']."<br>"."edad: ".$seleccionado['Edad']."</p>";
 						echo"<div class='d-flex justify-content-between align-items-center'>";
 					echo"<div class='btn-group'>";
-					$_SESSION['id_alumno']=$seleccionado['ID'];
-					echo"<a href='#' class='btn btn-secondary'>"."Revisar"."</a>";
+					
+					$envio=$seleccionado['ID'];
+					echo"<a href='revisar.php?id=".$envio." ' class='btn btn-secondary'>"."Revisar"."</a>";
 					echo"</div>";
 				echo"</div>";
 				echo"</div>";
 				echo"</div>";
 				echo"</div>";
 		}
+		
 	echo"</div>";
 	
 	?>
 	<a href="alumno.php"><button  class="btn btn-lg btn-dark btn-block " type="submit" href="alumno.php">Añadir alumno<br></button></a>
+	<?php include 'footer.html';?> 
+	</div>
 </main>
 
 
 
-<?php include 'footer.html';?>
+
 </body>
 </html>
