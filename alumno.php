@@ -43,11 +43,11 @@ if(isset($_REQUEST["existe"])){
 
 
 					<h6>Adjuntar DNI</h6>
-					<input type="file"  id="a" name="ImagDNI_A">
-					<!--<div class="custom-file">
-						<input type="file" class="custom-file-input" id="a" name="ImagDNI_A" aria-describedby="inputGroupFileAddon01">
-						<label class="custom-file-label" for="inputGroupFile01">Subir Foto</label>
-					</div>--><br>
+					<input type="file" id="a" name="ImagDNI_A">
+				<!--<div class="custom-file">
+				    <input type="file" class="custom-file-input" id="a" name="ImagDNI_A" aria-describedby="inputGroupFileAddon01">
+				    <label class="custom-file-label" for="inputGroupFile01">Subir Foto</label>
+				</div>--><br>
 
 
 				<script type="text/javascript">
@@ -84,6 +84,9 @@ if(isset($_REQUEST["existe"])){
 	if (!isset($_SESSION["usuario"])) {
 	header("location:index.php");
 	}
+	//creo ruta para guardar las imagenes
+	$destino= "/img";
+
 		//require_once 'conexiones.php';
 		if (isset($_POST['ida'])) {
 			include 'conexion.php';
@@ -96,9 +99,10 @@ if(isset($_REQUEST["existe"])){
 			$ano_A= $_POST['ano_A'];
 			$domicilio_A= $_POST['domicilio_A'];
 			$escuelaAnt= $_POST['escAnterior'];
-			$imagenDNI=uniqid ().$_FILES['ImagDNI_A']['name'];
-			$constancia=uniqid ().$_FILES['constancia']['name'];
-
+			//ACA CAMBIO LAS LLAMADAS DE IMAGENES
+			$imagenDNI= uniqid().$_FILES['ImagDNI_A']['name'];
+			$constancia= uniqid().$_FILES['constancia']['name'];
+			//ACA CAMBIO LAS LLAMADAS DE IMAGENES
 			$busquedaDni="SELECT * FROM chicos_i WHERE dni ='$dni_A'";
 
 			if ($resultadoDni = $conexion->query($busquedaDni)) {
@@ -109,6 +113,15 @@ if(isset($_REQUEST["existe"])){
 				{
 					$consulta="INSERT INTO `chicos_i` (`Nombre`, `Apellido`, `Edad`, `Domicilio`, `Escuela_A`, `dni`, `fotocopia`, `constancia`, `año_a_ingresar`) VALUES ('$nombre_A', '$apellido_A', '$edad_A', '$domicilio_A', '$escuelaAnt', '$dni_A', '$imagenDNI', '$constancia', '$ano_A');";
 					$resultado= mysqli_query($conexion, $consulta);
+
+					// agrego para q la imagen se copie en la carpeta del host
+					if ($resultado) {
+						move_uploaded_file($_FILES['ImagDNI_A']['tmp_name'], $destino.$imagenDNI);
+						move_uploaded_file($_FILES['constancia']['tmp_name'], $destino.$$constancia);
+							
+						}	
+					//
+
 
 					$id_alumno= $conexion->insert_id;
 
