@@ -2,7 +2,6 @@
 <html>
 	<?php include 'head.html';?>
 	<link href="estilos/signin.css" rel="stylesheet">
-	<link href="estilos/alumno.css" rel="stylesheet">
 	<title>Registrar Ingresante</title>
 </head>
 <body>
@@ -21,15 +20,13 @@ if(isset($_REQUEST["existe"])){
 	$año=$_REQUEST["año"];
 	$domicilio=$_REQUEST["domicilio"];
 	$escuela=$_REQUEST["escuela"];
-	
+
 	echo '<script type="text/javascript">alert("Ya existe ese DNI, Por favor inserte otro");</script>';
 }
 ?>
         <form class="form-signin" action="alumno.php" method="POST">
-            <center>
-			<h1 class="h1 mb-3 font-weight-normal">Ingresante</h1>
-			<article class="column1">
-				<section >
+        	<center>
+			<h1 class="h1 mb-3 font-weight-normal">Aspirante</h1>
 					<input type="text" class="form-control" name="nombre_A" placeholder="Nombre" value="<?php echo $nombre?>" required autofocus>
 
 					<input type="text" class="form-control" name="apellido_A" placeholder="Apellido" value="<?php echo $apellido?>" required>
@@ -42,26 +39,43 @@ if(isset($_REQUEST["existe"])){
 
 					<input type="text"  class="form-control" name="domicilio_A" placeholder="Domicilio" value="<?php echo $domicilio?>" required autofocus>
 
-					<input type="text" class="form-control" name="escAnterior" placeholder="Escuela anterior" value="<?php echo $escuela?>" required><br>
+					<input type="text" class="form-control" name="escAnterior" placeholder="Escuela anterior" value="<?php echo $escuela?>" required>
 
-					<button class="btn btn-lg btn-secondary btn-block" name="ida" type="submit">Ingresar</button>
-				</section>
-			</article>
-			<article class="column2">
-				<section> 
-					<div class="adjuntados">
-						Adjuntar DNI<br>
-						<input type="file" name="ImagDNI_A" accept="image/*" required>
-					</div>
 
-					<div class="adjuntados">
-						Adjuntar Constancia<br>
-						<input type="file" name="constancia" accept="image/*" required>
-					</div>
-				</section>
-			</article>
-			</center>
-        </form>
+					<h6>Adjuntar DNI</h6>
+					<input type="file"  id="a" name="ImagDNI_A">
+					<!--<div class="custom-file">
+						<input type="file" class="custom-file-input" id="a" name="ImagDNI_A" aria-describedby="inputGroupFileAddon01">
+						<label class="custom-file-label" for="inputGroupFile01">Subir Foto</label>
+					</div>--><br>
+
+
+				<script type="text/javascript">
+					document.getElementById("a").onchange = function(e) {
+					// Creamos el objeto de la clase FileReader
+					let reader = new FileReader();
+					// Leemos el archivo subido y se lo pasamos a nuestro fileReader
+					reader.readAsDataURL(e.target.files[0]);
+					// Le decimos que cuando este listo ejecute el código interno
+					reader.onload = function(){
+						let preview = document.getElementById('preview'),
+								image = document.createElement('img');
+						image.src = reader.result;
+						preview.innerHTML = '';
+						preview.append(image);
+					};
+					} 
+				</script>
+
+					<h6>Adjuntar Constancia</h6>
+				<div class="custom-file">
+				  <input type="file" class="custom-file-input" id="inputGroupFile01" name="constancia" aria-describedby="inputGroupFileAddon01">
+				  <label class="custom-file-label" for="inputGroupFile01">Subir Foto</label>
+				</div><br>
+
+					<button class="btn btn-lg btn-secondary btn-block mt-4" name="ida" type="submit">Ingresar</button>
+
+				</center>
 	</form>
 
 
@@ -71,8 +85,8 @@ if(isset($_REQUEST["existe"])){
 	header("location:index.php");
 	}
 		//require_once 'conexiones.php';
-		if (isset($_POST['ida'])) {			
-			$conexion =mysqli_connect("localhost", "root", "","sorteo");
+		if (isset($_POST['ida'])) {
+			include 'conexion.php';
 
 			//Recoger los valores del formulario de registro
 			$nombre_A= $_POST['nombre_A'];
@@ -82,8 +96,8 @@ if(isset($_REQUEST["existe"])){
 			$ano_A= $_POST['ano_A'];
 			$domicilio_A= $_POST['domicilio_A'];
 			$escuelaAnt= $_POST['escAnterior'];
-			$imagenDNI= $_POST['ImagDNI_A'];
-			$constancia= $_POST['constancia'];
+			$imagenDNI=uniqid ().$_FILES['ImagDNI_A']['name'];
+			$constancia=uniqid ().$_FILES['constancia']['name'];
 
 			$busquedaDni="SELECT * FROM chicos_i WHERE dni ='$dni_A'";
 
@@ -95,7 +109,7 @@ if(isset($_REQUEST["existe"])){
 				{
 					$consulta="INSERT INTO `chicos_i` (`Nombre`, `Apellido`, `Edad`, `Domicilio`, `Escuela_A`, `dni`, `fotocopia`, `constancia`, `año_a_ingresar`) VALUES ('$nombre_A', '$apellido_A', '$edad_A', '$domicilio_A', '$escuelaAnt', '$dni_A', '$imagenDNI', '$constancia', '$ano_A');";
 					$resultado= mysqli_query($conexion, $consulta);
-					
+
 					$id_alumno= $conexion->insert_id;
 
 					$sesion=$_SESSION['usuario'];
@@ -107,15 +121,15 @@ if(isset($_REQUEST["existe"])){
 
 					$consulta="INSERT INTO `tienechicos` (`id_tutor`, `id_chicos`) VALUES ('$id_tutor', '$id_alumno');";
 					$resultado= mysqli_query($conexion, $consulta);
-					
+
 
 					mysqli_close($conexion);
 
 					header("Location: hub.php");
-				
+
 					die();
 				}
-			}	
+			}
 			mysqli_close($conexion);
 		}
 		include 'footer.html';

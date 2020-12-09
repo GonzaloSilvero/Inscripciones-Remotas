@@ -3,21 +3,21 @@
 	if (!isset($_SESSION["admin"])) {
 		header("location:../index.php");
 	}
-    $conexion =mysqli_connect("localhost", "root", "","sorteo");
+	include '../conexion.php';
 	$seleccion="SELECT * FROM `chicos_i`";
 	$resultado = $conexion->query($seleccion);
-	
+
 ?>
 <!doctype html>
 <html lang="es">
 	<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="estilos/bootstrap.css" rel="stylesheet">		 
-		<script src="js/jquery.js"></script>
-		<script src="js/bootstrap.js"></script>
-		<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+		<link href="../estilos/bootstrap.css" rel="stylesheet">
+		<script src="../js/jquery.js"></script>
+		<script src="../js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="../DataTables/datatables.min.css"/>
 
-<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+<script type="text/javascript" src="../DataTables/datatables.min.js"></script>
 <script src="https://kit.fontawesome.com/82ccab91a3.js" crossorigin="anonymous"></script>
 
 <script>
@@ -36,14 +36,14 @@
 				"paginate": {
 					"next":       "Siguiente",
 					"previous":   "Anterior"
-				},					
+				},
 			}
-		});	
-	});	
+		});
+	});
 </script>
 	</head>
 	<body style="background-color: #d2d9df">
-	<?php include 'nav.html';?>
+	<?php include 'navAdmin.html';?>
 
 
 			<div class="row table-responsive">
@@ -54,12 +54,14 @@
 							<th>Apellido</th>
                             <th>Edad</th>
 							<th>Dni</th>
+							<th>Año a ingresar</th>
 							<th>Domicilio</th>
 							<th>Escuela Anterior</th>
+
 							<th>Modificar</th>
 						</tr>
 					</thead>
-					
+
 					<tbody>
 						<?php while($row = $resultado->fetch_array(MYSQLI_ASSOC)) {
 							?>
@@ -68,9 +70,10 @@
 								<td><?php echo $row['Apellido']; ?></td>
 								<td><?php echo $row['Edad']; ?></td>
 								<td><?php echo $row['dni']; ?></td>
-							
+								<td><?php echo $row['año_a_ingresar']; ?></td>
+
 								<td><?php echo $row['Domicilio'] ?> </td>
-								<td><?php echo $row['Escuela_A']; ?></td>	
+								<td><?php echo $row['Escuela_A']; ?></td>
 
 								<td><a href="modificar.php?id=<?php echo $row['ID']; ?>"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg%22%3E">
                                 <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
@@ -82,13 +85,7 @@
 				</table>
 			</div>
 
-		
+
 	<?php mysqli_close($conexion) ?>
 	</body>
 </html>
-
-<?php//DELETE FROM `chicos_i` WHERE `chicos_i`.`ID` = 22
-
-
-//DELETE FROM `tienechicos` WHERE `tienechicos`.`id` = 4
-?>
