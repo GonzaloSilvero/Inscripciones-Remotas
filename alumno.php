@@ -43,11 +43,11 @@ if(isset($_REQUEST["existe"])){
 
 
 					<h6>Adjuntar DNI</h6>
-					<input type="file" id="a" name="ImagDNI_A">
-				<!--<div class="custom-file">
-				    <input type="file" class="custom-file-input" id="a" name="ImagDNI_A" aria-describedby="inputGroupFileAddon01">
-				    <label class="custom-file-label" for="inputGroupFile01">Subir Foto</label>
-				</div>--><br>
+					<input type="file"  id="a" name="ImagDNI_A">
+					<!--<div class="custom-file">
+						<input type="file" class="custom-file-input" id="a" name="ImagDNI_A" aria-describedby="inputGroupFileAddon01">
+						<label class="custom-file-label" for="inputGroupFile01">Subir Foto</label>
+					</div>--><br>
 
 
 				<script type="text/javascript">
@@ -96,8 +96,8 @@ if(isset($_REQUEST["existe"])){
 			$ano_A= $_POST['ano_A'];
 			$domicilio_A= $_POST['domicilio_A'];
 			$escuelaAnt= $_POST['escAnterior'];
-			$imagenDNI= $_POST['ImagDNI_A'];
-			$constancia= $_POST['constancia'];
+			$imagenDNI=uniqid ().$_FILES['ImagDNI_A']['name'];
+			$constancia=uniqid ().$_FILES['constancia']['name'];
 
 			$busquedaDni="SELECT * FROM chicos_i WHERE dni ='$dni_A'";
 

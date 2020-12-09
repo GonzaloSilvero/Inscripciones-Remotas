@@ -63,7 +63,7 @@ if(isset($_REQUEST["repe"])){
 			<h5>Contraseña</h5>
 			<input type="text" id="inputContraseña" class="form-control" name="contrasena_T" minlength="8" maxlength="8" placeholder="Dni Alumno" required>
 
-            <button class="btn btn-lg btn-secondary btn-block" name="ida" id="enviar" type="submit">Ingresar</button>
+            <button class="btn btn-lg btn-secondary btn-block" name="ida" id="enviar" >Ingresar</button>
             </center>
 		</form>
 		<script src="validaciones/jquery-3.5.1.js"></script>
@@ -85,7 +85,7 @@ if(isset($_REQUEST["repe"])){
 			$Rusuario_T= $_POST['Rusuario_T'];
 			$contrasena_T= $_POST['contrasena_T'];
 
-			$busquedaUsuario="SELECT * FROM tutor WHERE Usuario ='$Usuario_T'";
+			$busquedaUsuario="SELECT * FROM tutor WHERE Usuario = $Usuario_T ";
 
 			if($Usuario_T==$Rusuario_T)
 			{
