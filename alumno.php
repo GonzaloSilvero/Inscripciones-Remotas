@@ -22,7 +22,7 @@ if(isset($_REQUEST["existe"])){
 	$escuela=$_REQUEST["escuela"];
 
 	echo '<script type="text/javascript">alert("Ya existe ese DNI, Por favor inserte otro");</script>';
-}
+} 
 ?>
         <form class="form-signin" action="alumno.php" method="POST">
         	<center>
@@ -64,7 +64,7 @@ if(isset($_REQUEST["existe"])){
 						preview.innerHTML = '';
 						preview.append(image);
 					};
-					} 
+					}
 				</script>
 
 					<h6>Adjuntar Constancia</h6>
@@ -118,8 +118,8 @@ if(isset($_REQUEST["existe"])){
 					if ($resultado) {
 						move_uploaded_file($_FILES['ImagDNI_A']['tmp_name'], $destino.$imagenDNI);
 						move_uploaded_file($_FILES['constancia']['tmp_name'], $destino.$$constancia);
-							
-						}	
+
+						}
 					//
 
 
