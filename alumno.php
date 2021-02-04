@@ -22,7 +22,7 @@ if(isset($_REQUEST["existe"])){
 	$escuela=$_REQUEST["escuela"];
 
 	echo '<script type="text/javascript">alert("Ya existe ese DNI, Por favor inserte otro");</script>';
-}
+} 
 ?>
         <form class="form-signin" action="alumno.php" method="POST">
         	<center>
